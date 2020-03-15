@@ -1,5 +1,5 @@
-import { PostRequestHandler, RequestHandler } from './index';
-import * as F from '../../fp';
+import { PostRequestHandler, RequestHandler } from './express';
+import * as F from './fp';
 
 const mock = Object.assign;
 

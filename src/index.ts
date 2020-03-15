@@ -1,37 +1,84 @@
-import * as R from 'ramda'
-export * from 'ramda'
+// environment
+require('dotenv').config({
+  path: require('path').join(__dirname, '../../../.env')
+});
 
-export const serialize = JSON.stringify
-export const unserialize = JSON.parse
-export const list = R.unapply(R.identity)
-export const print = <T>(x: T): T => { console.log(x); return x; } // refactor
-export const args = () => process.argv.slice(2)
-export const onSuccess: { (x: any) } = R.compose(process.exit, R.always(0), console.log)
-export const onError: { (err: any) } = R.compose(process.exit, R.always(1), (err) => console.error(err.stack))
-export const promiseAll = (x: Promise<any>[]): Promise<any[]> => Promise.all(x)
-export const thenAlways = <T>(x: T) => (y: Promise<any>): Promise<T> => R.then(R.always(x))(y)
+// imports
+import 'reflect-metadata';
+import { createConnection } from 'typeorm';
+import { Domain } from './entity/Domain';
+import { Role } from './entity/Role';
+import { User } from './entity/User';
+import { UserDomainRole } from './entity/UserDomainRole';
+import express from 'express';
+import { PostRequestHandler } from './express';
+import bodyParser from 'body-parser';
 
-// https://stackabuse.com/encoding-and-decoding-base64-strings-in-node-js/#encodingbase64stringswithnodejs
-export const base64encode = (x: string) => Buffer.from(x).toString('base64')
+// connection
+import config from './typeorm.config';
+createConnection(config)
+  .then(async (connection) => {
+    // app
+    const { EXPRESS_TYPEORM_PORT: PORT = 3000 } = process.env;
+    const baseUrl = `http://localhost:${PORT}`;
 
-// renameKeys({ firstName: 'name', type: 'kind', foo: 'bar' })({ firstName: 'Elisia', age: 22, type: 'human' }) => { name: 'Elisia', age: 22, kind: 'human' }
-export const renameKeys = R.curry((keysMap, obj) =>
-  R.reduce((acc, key) => R.assoc(keysMap[key] || key, obj[key], acc), {}, R.keys(obj))
-)
+    const app = express();
+    app.use(bodyParser.json());
 
-export const pretty = (x: any) => JSON.stringify(x, null, 2)
+    // User
+    const userRepository = connection.getRepository(User);
+    app.post(
+      '/create-user',
+      PostRequestHandler(async (body) => {
+        const user = new User();
+        Object.assign(user, body);
+        await userRepository.save(user);
+        return user;
+      })
+    );
 
-export const d = (msg?: string, fn = pretty) => <T>(x: T): T => R.compose(
-  R.always(x),
-  console.log,
-  R.cond([
-    [(x) => isNotNil(msg), R.always(`${msg}: ${fn(x)}`)],
-    [R.T, R.always(x)],
-  ]),
-  (x => x),
-)(x)
+    app.post(
+      '/find-user-by-id',
+      PostRequestHandler(async ({ id }) => userRepository.findOne(id))
+    );
+    app.post(
+      '/delete-user-by-id',
+      PostRequestHandler(async ({ id }) => userRepository.delete(id))
+    );
 
-export const isNotEmpty = R.compose(R.not, R.isEmpty)
-export const isNotNil = R.compose(R.not, R.isNil)
-export const mapAsync = <T = any>(fn): { (arr: any[]): Promise<T[]> } => (arr) => Promise.all(arr.map(fn)) as Promise<T[]>
-export const noop = () => { }
+    // Domain
+    const domainRepository = connection.getRepository(Domain);
+    app.post(
+      '/create-domain',
+      PostRequestHandler(async (body) => {
+        const domain = new Domain();
+        Object.assign(domain, body);
+        await domainRepository.save(domain);
+        return domain;
+      })
+    );
+
+    app.post(
+      '/find-domain-by-id',
+      PostRequestHandler(async ({ id }) => domainRepository.findOne(id))
+    );
+    app.post(
+      '/delete-domain-by-id',
+      PostRequestHandler(async ({ id }) => domainRepository.delete(id))
+    );
+
+    // UserDomainRole
+    const userDomainRolesRepository = connection.getRepository(UserDomainRole);
+    app.post(
+      '/create-user-domain-role',
+      PostRequestHandler(async (body) => {
+        const userDomainRole = new UserDomainRole();
+        Object.assign(userDomainRole, body);
+        await userDomainRolesRepository.save(userDomainRole);
+        return userDomainRole;
+      })
+    );
+
+    app.listen(PORT, () => console.log('app listening on', PORT));
+  })
+  .catch((error) => console.log(error));

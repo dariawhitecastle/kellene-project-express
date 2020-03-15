@@ -1,5 +1,5 @@
 import * as express from 'express';
-import * as F from '../../fp';
+import * as F from './fp';
 
 export const OnSuccess = (json: boolean) => (req, res, next) => (x) => {
   if (json) {

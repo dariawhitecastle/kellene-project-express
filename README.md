@@ -1,10 +1,4 @@
-# @mz3/express
-
-## Installation
-
-```bash
-yarn add @mz3/express
-```
+# Express/TypeORM for Forensic Truth app
 
 ## Usage
 
