@@ -6,10 +6,8 @@ require('dotenv').config({
 // imports
 import 'reflect-metadata';
 import { createConnection } from 'typeorm';
-import { Domain } from './entity/Domain';
-import { Role } from './entity/Role';
-import { User } from './entity/User';
-import { UserDomainRole } from './entity/UserDomainRole';
+import { User } from './entity/User'
+import { UserDomainRole } from './entity/UserDomainRole'
 import express from 'express';
 import { PostRequestHandler } from './express';
 import bodyParser from 'body-parser';
@@ -44,27 +42,6 @@ createConnection(config)
     app.post(
       '/delete-user-by-id',
       PostRequestHandler(async ({ id }) => userRepository.delete(id))
-    );
-
-    // Domain
-    const domainRepository = connection.getRepository(Domain);
-    app.post(
-      '/create-domain',
-      PostRequestHandler(async (body) => {
-        const domain = new Domain();
-        Object.assign(domain, body);
-        await domainRepository.save(domain);
-        return domain;
-      })
-    );
-
-    app.post(
-      '/find-domain-by-id',
-      PostRequestHandler(async ({ id }) => domainRepository.findOne(id))
-    );
-    app.post(
-      '/delete-domain-by-id',
-      PostRequestHandler(async ({ id }) => domainRepository.delete(id))
     );
 
     // UserDomainRole
