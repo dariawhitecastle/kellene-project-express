@@ -1,6 +1,6 @@
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, OneToMany } from "typeorm";
-import { Organization } from './Organization'
+import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from "typeorm";
 import { UserDomainRole } from './UserDomainRole'
+import { Application } from './Application'
 
 @Entity()
 export class User {
@@ -9,12 +9,18 @@ export class User {
   id: number;
 
   @Column()
-  emailAddress: string;
+  firstName: string;
 
-  @ManyToOne(type => Organization, organization => organization.users, { eager: true })
-  organization: Organization;
+  @Column()
+  lastName: string;
+
+  @Column()
+  emailAddress: string;
 
   @OneToMany(type => UserDomainRole, userToRole => userToRole.user, { eager: true })
   public userDomainRoles!: UserDomainRole[];
+
+  @OneToMany(type => Application, application => application.user)
+  public userApplications: Application[];
 
 }

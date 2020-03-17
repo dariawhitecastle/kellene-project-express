@@ -1,4 +1,6 @@
-import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Column, OneToOne, ManyToOne, OneToMany } from "typeorm";
+import { User } from './User'
+import { Section } from './Section'
 
 @Entity()
 export class Application {
@@ -6,7 +8,10 @@ export class Application {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column()
-  name: string;
+  @ManyToOne(type => User, user => user.userApplications)
+  public user: User;
 
+  @OneToMany(type => Section, section => section.application)
+  public section!: Section[]
+  
 }
