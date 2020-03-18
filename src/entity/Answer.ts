@@ -1,6 +1,7 @@
 import { Entity, PrimaryGeneratedColumn, Column, OneToOne, ManyToOne, JoinColumn } from "typeorm";
 import { Question } from './Question';
 import { Note } from './Note' 
+import { Submission } from './Submission'
 
 @Entity()
 export class Answer { 
@@ -12,6 +13,9 @@ export class Answer {
 
     @Column()
     responseSelection: string;
+
+    @ManyToOne(type => Submission, submission => submission.answer)
+    public submission: Submission
 
     @ManyToOne(type => Question, question => question.answer)
     public question: Question;

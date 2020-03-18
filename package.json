@@ -37,6 +37,7 @@
     "prepare": "yarn clean; yarn build",
     "startdb": "bin/psql-db.sh",
     "typeorm:cli": "ts-node ./node_modules/typeorm/cli -f ./src/typeorm.config.ts",
+    "migration:generate": "yarn typeorm:cli migration:generate -n",
     "db:create": "bin/create-db.sh",
     "db:drop": "bin/drop-db.sh",
     "db:migrate": "yarn typeorm:cli migration:run",
