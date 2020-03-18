@@ -1,6 +1,6 @@
 import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from "typeorm";
 import { UserDomainRole } from './UserDomainRole'
-import { Application } from './Application'
+import { Submission } from './Submission'
 
 @Entity()
 export class User {
@@ -20,7 +20,7 @@ export class User {
   @OneToMany(type => UserDomainRole, userToRole => userToRole.user, { eager: true })
   public userDomainRoles!: UserDomainRole[];
 
-  @OneToMany(type => Application, application => application.user)
-  public userApplications: Application[];
+  @OneToMany(type => Submission, submission => submission.user)
+  public submission: Submission[]
 
 }
