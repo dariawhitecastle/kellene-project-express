@@ -1,0 +1,20 @@
+entity: Section
+items:
+  section1:
+    name: 'Personal Information'
+  section2:
+    name: 'Application Process'
+  section3:
+    name: 'Driving and Education'
+  section4:
+    name: 'Work History'
+  section5:
+    name: 'Criminal History'   
+  section6:
+    name: 'Drugs and Theft'    
+  section7:
+    name: 'Integrity'
+  section8:
+    name: 'Financial Information'  
+
+    

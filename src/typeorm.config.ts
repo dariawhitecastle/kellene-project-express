@@ -13,6 +13,7 @@ import { ConnectionOptions } from 'typeorm';
 import path from 'path';
 
 const config: ConnectionOptions = {
+   name: 'forensic_truth',
    type: 'postgres',
    host: PGHOST,
    username: PGUSER,
