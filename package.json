@@ -35,7 +35,6 @@
     "test": "jest -c ../../jest.unit.js $PWD",
     "build": "tsc -b -v",
     "clean": "tsc -b --clean",
-    "fixture": "fixtures ./src/fixtures -c ./src/typeorm.config.ts --sync --require=ts-node/register --connection forensic_truth",
     "prepare": "yarn clean; yarn build",
     "startdb": "bin/psql-db.sh",
     "typeorm": "ts-node ./node_modules/typeorm/cli -f ./src/typeorm.config.ts",
@@ -44,6 +43,7 @@
     "db:drop": "bin/drop-db.sh",
     "db:migrate": "yarn typeorm migration:run -c forensic_truth",
     "db:revert": "yarn typeorm migration:revert -c forensic_truth",
+    "db:seed": "fixtures ./src/fixtures -c ./src/typeorm.config.ts --sync --require=ts-node/register --connection forensic_truth",
     "client": "bin/build-client.ts"
   }
 }
