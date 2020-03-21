@@ -11,7 +11,13 @@ export class Question {
     description: string;
 
     @Column()
-    responseOptions: string;
+    type: string;
+
+    @Column({ type: "simple-array", nullable: true })
+    subQuestions: number[];
+
+    @Column({type: "simple-array", nullable: true })
+    responseOptions: string[];
 
     @Column()
     externalUse: boolean;

@@ -38,12 +38,12 @@
     "fixture": "fixtures ./src/fixtures -c ./src/typeorm.config.ts --sync --require=ts-node/register --connection forensic_truth",
     "prepare": "yarn clean; yarn build",
     "startdb": "bin/psql-db.sh",
-    "typeorm:cli": "ts-node ./node_modules/typeorm/cli -f ./src/typeorm.config.ts",
-    "migration:generate": "yarn typeorm:cli migration:generate -n",
+    "typeorm": "ts-node ./node_modules/typeorm/cli -f ./src/typeorm.config.ts",
+    "migration:generate": "yarn typeorm -c forensic_truth migration:generate -n",
     "db:create": "bin/create-db.sh",
     "db:drop": "bin/drop-db.sh",
-    "db:migrate": "yarn typeorm:cli migration:run",
-    "db:revert": "yarn typeorm:cli migration:revert",
+    "db:migrate": "yarn typeorm migration:run -c forensic_truth",
+    "db:revert": "yarn typeorm migration:revert -c forensic_truth",
     "client": "bin/build-client.ts"
   }
 }

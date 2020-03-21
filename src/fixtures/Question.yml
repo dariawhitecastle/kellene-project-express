@@ -1,0 +1,96 @@
+entity: Question
+items:
+  question1:
+    description: 'Name (First, Middle and Last)'
+    type: 'text'
+    externalUse: true
+    section: '@section1'
+  question2:
+    description: 'Street Address'
+    type: 'text'
+    externalUse: true
+    section: '@section1'  
+  question3:
+    description: 'City'
+    type: 'text'
+    externalUse: true
+    section: '@section1'  
+  question4:
+    description: 'State'
+    type: 'dropdown'
+    externalUse: true
+    section: '@section1'    
+  question5:
+    description: 'Zip'
+    type: 'number'
+    externalUse: true
+    section: '@section1'
+  question6:
+    description: 'Date of Birth'
+    type: 'date'
+    externalUse: true
+    section: '@section1'
+  question7:
+    description: 'Last 4 digits of SSN'
+    type: 'number'
+    externalUse: true
+    section: '@section1'    
+  question8:
+    description: 'Is this an application for the City and County of Denver or the Denver Civil Service Commission (Police or Fire)?'
+    type: 'dropdown'
+    subQuestions: '9, 10, 11'
+    externalUse: true
+    section: '@section1'  
+  question9:
+    description: 'Place of birth'
+    type: 'text'
+    externalUse: true
+    section: '@section1' 
+  question10:
+    description: 'Are you a US citizen?'
+    type: 'dropdown'
+    externalUse: true
+    section: '@section1' 
+  question11:
+    description: 'If not, are you legal to work in the United States?'
+    type: 'dropdown'
+    externalUse: true
+    section: '@section1'  
+  question12:
+    description: 'Have you ever taken a polygraph or voice stress examination (CVSA)?'
+    type: 'dropdown'
+    subQuestions: '13'
+    externalUse: true
+    section: '@section1' 
+  question13:
+    description: 'List all exams you have taken, for whom and when (agency and estimated month/year are acceptable).'
+    type: 'text'
+    externalUse: true
+    section: '@section1' 
+  question14:
+    description: 'When was the last time you slept?'
+    type: 'radio'
+    responseOptions: ['Last night', 'Yesterday', 'Before Yesterday']
+    externalUse: true
+    section: '@section1'           
+  question15:
+    description: 'Number of hours slept?'
+    type: 'number'
+    externalUse: true
+    section: '@section1'  
+  question16:
+    description: 'List all prescription medications, alcohol, or illegal drugs you have consumed in the last 24 hours.'
+    type: 'text'
+    externalUse: false
+    section: '@section1'
+  question17:
+    description: 'Are you experiencing any physical discomfort that you think would affect this examination?'
+    type: 'dropdown'
+    externalUse: true
+    section: '@section1'       
+
+   
+    
+    
+
+    
