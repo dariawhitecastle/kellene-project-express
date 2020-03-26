@@ -1,90 +1,939 @@
 entity: Question
 items:
   question1:
-    description: 'Name (First, Middle and Last)'
-    type: 'text'
+    description: Name (First, Middle and Last)
+    type: text
+    subQuestions: ''
+    responseOptions: ''
     externalUse: true
     section: '@section1'
-  question2:
-    description: 'Street Address'
-    type: 'text'
+  question2:  
+    description: Street Address
+    type: text
+    subQuestions: ''
+    responseOptions: ''
     externalUse: true
-    section: '@section1'  
-  question3:
-    description: 'City'
-    type: 'text'
+    section: '@section1'
+  question3:  
+    description: City
+    type: text
+    subQuestions: ''
+    responseOptions: ''
     externalUse: true
-    section: '@section1'  
-  question4:
-    description: 'State'
-    type: 'dropdown'
+    section: '@section1'
+  question4:    
+    description: State
+    type: dropdown
+    subQuestions: ''
+    responseOptions: ''
     externalUse: true
-    section: '@section1'    
-  question5:
-    description: 'Zip'
-    type: 'number'
+    section: '@section1'
+  question5:    
+    description: Zip
+    type: number
+    subQuestions: ''
+    responseOptions: ''
     externalUse: true
     section: '@section1'
   question6:
-    description: 'Date of Birth'
-    type: 'date'
+    description: Date of Birth
+    type: date
+    subQuestions: ''
+    responseOptions: ''
     externalUse: true
     section: '@section1'
-  question7:
-    description: 'Last 4 digits of SSN'
-    type: 'number'
+  question7:  
+    description: Last 4 digits of SSN
+    type: number
+    subQuestions: ''
+    responseOptions: ''
     externalUse: true
-    section: '@section1'    
+    section: '@section1'
   question8:
-    description: 'Is this an application for the City and County of Denver or the Denver Civil Service Commission (Police or Fire)?'
-    type: 'dropdown'
+    description: 
+      Is this an application for the City and County of Denver or the Denver Civil
+      Service Commission (Police or Fire)?
+    type: checkbox
     subQuestions: '9, 10, 11'
+    responseOptions: ''
     externalUse: true
-    section: '@section1'  
-  question9:
-    description: 'Place of birth'
-    type: 'text'
+    section: '@section1'
+  question9:  
+    description: Place of birth
+    type: text
+    subQuestions: ''
+    responseOptions: ''
     externalUse: true
-    section: '@section1' 
+    section: '@section1'
   question10:
-    description: 'Are you a US citizen?'
-    type: 'dropdown'
+    description: Are you a US citizen?
+    type: checkbox
+    subQuestions: ''
+    responseOptions: ''
     externalUse: true
-    section: '@section1' 
+    section: '@section1'
   question11:
     description: 'If not, are you legal to work in the United States?'
-    type: 'dropdown'
+    type: checkbox
+    subQuestions: ''
+    responseOptions: ''
     externalUse: true
-    section: '@section1'  
+    section: '@section1'
   question12:
-    description: 'Have you ever taken a polygraph or voice stress examination (CVSA)?'
-    type: 'dropdown'
+    description: Have you ever taken a polygraph or voice stress examination (CVSA)?
+    type: checkbox
     subQuestions: '13'
+    responseOptions: ''
     externalUse: true
-    section: '@section1' 
+    section: '@section1'
   question13:
-    description: 'List all exams you have taken, for whom and when (agency and estimated month/year are acceptable).'
-    type: 'text'
+    description: 
+      List all exams you have taken, for whom and when (agency and estimated
+      month/year are acceptable).
+    type: text
+    subQuestions: ''
+    responseOptions: ''
     externalUse: true
-    section: '@section1' 
+    section: '@section1'
   question14:
-    description: 'When was the last time you slept?'
-    type: 'radio'
-    responseOptions: ['Last night', 'Yesterday', 'Before Yesterday']
+    description: When was the last time you slept?
+    type: radio
+    subQuestions: ''
+    responseOptions: 'Last night, Yesterday, Before Yesterday'
     externalUse: true
-    section: '@section1'           
+    section: '@section1'
   question15:
-    description: 'Number of hours slept?'
-    type: 'number'
+    description: Number of hours slept?
+    type: number
+    subQuestions: ''
+    responseOptions: ''
     externalUse: true
-    section: '@section1'  
+    section: '@section1'
   question16:
-    description: 'List all prescription medications, alcohol, or illegal drugs you have consumed in the last 24 hours.'
-    type: 'text'
+    description:
+      List all prescription medications, alcohol, or illegal drugs you have
+      consumed in the last 24 hours.
+    type: text
+    subQuestions: ''
+    responseOptions: ''
     externalUse: false
     section: '@section1'
   question17:
-    description: 'Are you experiencing any physical discomfort that you think would affect this examination?'
-    type: 'dropdown'
+    description:
+      Are you experiencing any physical discomfort that you think would affect
+      this examination?
+    type: checkbox
+    subQuestions: ''
+    responseOptions: ''
     externalUse: true
-    section: '@section1'       
+    section: '@section1'
+  question19:
+    description:
+      List all the information you may have left off your application, or have
+      incorrectly provided on your application. 
+    type: text
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section2'
+  question20:
+    description:
+      On any of your examinations or tests for the organization you are applying
+      for, did you falsify any information or cheat in any way? 
+    type: checbox
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section2'
+  question21:
+    description:
+      How long do you intend to stay with this organization, if hired (in number
+      of years)?
+    type: number
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section2'
+  question23:
+    description: Driving Record
+    type: none
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section3'
+  question24:
+    description: What state is your current drivers license issued in?
+    type: dropdown
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section3'
+  question25:
+    description:
+      Have you held a drivers license in any other state or country in the last 7
+      years?
+    type: checkbox
+    subQuestions: '26, 27'
+    responseOptions: ''
+    externalUse: true
+    section: '@section3'
+  question26:
+    description: Where did you hold drivers license
+    type: text
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section3'
+  question27:
+    description: Date range (year to year is acceptable)
+    type: text
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section3'
+  question28:
+    description: 'List all traffic violations, photo radar tickets, and at fault traffic accidents in the last 7 years:'
+    type: none
+    subQuestions: '29, 30, 31, 32, 33'
+    responseOptions: ''
+    externalUse: true
+    section: '@section3'
+  question29:
+    description: Date (Month/Year)
+    type: date
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section3'
+  question30:
+    description: Location (City/State)
+    type: text
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section3'
+  question31:
+    description: Offense
+    type: text
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section3'
+  question32:
+    description: Outcome/Sentence
+    type: text
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section3'
+  question33:
+    description: Did you pay on time?
+    type: checkbox
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section3'
+  question34:
+    description:
+      Has your drivers license ever been suspended, restricted or revoked, or have
+      you ever been denied a drivers license?
+    type: checkbox
+    subQuestions: '35'
+    responseOptions: ''
+    externalUse: true
+    section: '@section3'
+  question35:
+    description: 'List where, when and why '
+    type: text
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section3'
+  question36:
+    description: Education
+    type: none
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section3'
+  question37:
+    description:
+      List the high school you attended and all other schools you attended after
+      high school. Include any police or fire academies.
+    type: none
+    subQuestions: '37, 38, 39, 40'
+    responseOptions: ''
+    externalUse: true
+    section: '@section3'
+  question38:
+    description: School Name
+    type: test
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section3'
+  question39:
+    description: Location (City/State)
+    type: test
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section3'
+  question40:
+    description: Years attended
+    type: date
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section3'
+  question41:
+    description: Degree/Certificate
+    type: text
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section3'
+  question43:
+    description: Work History
+    type: none
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section4'
+  question44:
+    description:
+      List all jobs you have held in the last 5 years including short term or
+      under the table jobs. Account for all periods of time over 60 days,
+      including unemployment and self employment.
+    type: none
+    subQuestions: '45, 46, 47, 48, 49'
+    responseOptions: ''
+    externalUse: true
+    section: '@section4'
+  question45:
+    description: Company
+    type: text
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section4'
+  question46:
+    description: City/state
+    type: text
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section4'
+  question47:
+    description: Dates
+    type: date
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section4'
+  question48:
+    description: Position
+    type: text
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section4'
+  question49:
+    description: Why did you leave
+    type: text
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section4'
+  question50:
+    description:
+      List ALL the jobs you have been fired from, left by mutual decision, or have
+      been asked to resign from.
+    type: text
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section4'
+  question51:
+    description: Have you ever had any disciplinary actions taken against you?
+    type: checkbox
+    subQuestions: '52, 53, 54, 55'
+    responseOptions: ''
+    externalUse: true
+    section: '@section4'
+  question52:
+    description: Date
+    type: date
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section4'
+  question53:
+    description: Description of Incident
+    type: text
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section4'
+  question54:
+    description: 'Action (write up, suspension, etc)'
+    type: text
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section4'
+  question55:
+    description: Employer
+    type: text
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section4'
+  question56:
+    description: 'Military Service '
+    type: none
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section4'
+  question57:
+    description: 'Have you ever served in the military, for any length of time?'
+    type: checkbox
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section4'
+  question58:
+    description: Branch
+    type: text
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section4'
+  question59:
+    description: 'Dates of service '
+    type: date
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section4'
+  question60:
+    description:
+      Any disciplinary actions, court martials, or judicial actions? (Including
+      negative counselings and letters of reprimand)
+    type: checkbox
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section4'
+  question61:
+    description: 'If yes: please explain'
+    type: text
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section4'
+  question62:
+    description: 'Highest rank obtained (e.g., E 4, O 2, etc.)'
+    type: text
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section4'
+  question64:
+    description: Primary or last duty station
+    type: text
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section4'
+  question65:
+    description: Type of discharge
+    type: dropdown
+    subQuestions: ''
+    responseOptions:
+      Honorable, General, General Under Honorable, Other Than Honorable, Bad
+      Conduct, Dishonorable, Entry Level
+    externalUse: true
+    section: '@section4'
+  question66:
+    description: Rank at discharge
+    type: text
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section4'
+  question67:
+    description: Have you ever served in the active reserves?
+    type: checkbox
+    subQuestions: '68'
+    responseOptions: ''
+    externalUse: true
+    section: '@section4'
+  question68:
+    description: 'Where, when and rank'
+    type: text
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section4'
+  question69:
+    description: 'Criminal History'
+    type: 'none'
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section5'
+  question70:
+    description:
+      Please list all the times you have ever been arrested or charged with a
+      criminal offense (Do not include minor traffic incidents)
+    type: 'none'
+    subQuestions: '71, 72, 73, 74'
+    responseOptions: ''
+    externalUse: true
+    section: '@section5'
+  question71:
+    description: Date
+    type: date
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section5'
+  question72:
+    description: Type of offense
+    type: text
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section5'
+  question73:
+    description: City/State
+    type: text
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section5'
+  question74:
+    description: Sentence
+    type: text
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section5'
+  question75:
+    description:
+      What are the most serious laws you have broken that you did not get caught
+      for?
+    type: none
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section5'
+  question76:
+    description: What law
+    type: text
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section5'
+  question77:
+    description: Date of last occurence
+    type: date
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section5'
+  question78:
+    description: Explain
+    type: text
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section5'
+  question79:
+    description:
+      Are you now, or have you ever been, the subject of any criminal
+      investigation? 
+    type: checkbox
+    subQuestions: '80'
+    responseOptions: ''
+    externalUse: true
+    section: '@section5'
+  question80:
+    description: 'Please explain:'
+    type: text
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section5'
+  question81:
+    description: 'Drug and Theft'
+    type: 'none'
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section6'
+  question82:
+    description:
+      Drug Usage (Please only list the last time you used any of the following
+      drugs, such as the last time you used marijuana and the last time you used
+      cocaine, etc.
+    type: radio
+    subQuestions: ''
+    responseOptions:
+      Marijuana, Hashish, Cocaine, Crack cocaine, Speed, Downers, LSD/acid,
+      Heroin, PCP, Quaaludes, Anabolic steroids, Opium, Mushrooms, Other
+      Psychedelics, Ecstasy, Other
+    externalUse: true
+    section: '@section6'
+  question83:
+    description: Do you suspect you have ever been drugged?
+    type: checkbox
+    subQuestions: '84'
+    responseOptions: ''
+    externalUse: true
+    section: '@section6'
+  question84:
+    description: 'Please explain'
+    type: text
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section6'
+  question85:
+    description: 'Have you ever used someone else''s prescription medication, for any reason?'
+    type: checkbox
+    subQuestions: '86'
+    responseOptions: ''
+    externalUse: true
+    section: '@section6'
+  question86:
+    description: 'Please explain '
+    type: text
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section6'
+  question87:
+    description:
+      Have you ever inhaled any fumes or chemicals, such as glue, Whip its, or
+      gasoline, for the purposes of getting high?
+    type: checkbox
+    subQuestions: '88'
+    responseOptions: ''
+    externalUse: true
+    section: '@section6'
+  question88:
+    description: 'Please explain '
+    type: text
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section6'
+  question89:
+    description: 'Have you ever used marijuana, alcohol, or any other illegal drugs at work?'
+    type: checkbox
+    subQuestions: '90'
+    responseOptions: ''
+    externalUse: true
+    section: '@section6'
+  question90:
+    description: 'Please explain '
+    type: text
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section6'
+  question91:
+    description: Drug Sales/Manufacturing
+    type: none
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section6'
+  question92:
+    description:
+      Which of the above illegal drugs have you ever sold or traded (even at
+      cost), manufactured, or transported?
+    type: text
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section6'
+  question93:
+    description: 'Theft/Stealing '
+    type: none
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section6'
+  question94:
+    description:
+      In the past 10 years, have you, without permission, taken, given away or
+      discounted any merchandise or property from your employers? 
+    type: checkbox
+    subQuestions: '95, 96'
+    responseOptions: ''
+    externalUse: true
+    section: '@section6'
+  question95:
+    description: What
+    type: text
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section6'
+  question96:
+    description: Total worth
+    type: rangeInput
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section6'
+  question97:
+    description:
+      In the past 10 years, have you, without permission, taken any money from
+      your employers? 
+    type: checkbox
+    subQuestions: '98, 99'
+    responseOptions: ''
+    externalUse: true
+    section: '@section6'
+  question98:
+    description: What
+    type: text
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section6'
+  question99:
+    description: Total worth
+    type: rangeInput
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section6'
+  question100:
+    description:
+      Not counting employers, in the past 10 years, have you, without permission,
+      taken, shoplifted or stolen from anyone (including shoplifting)? 
+    type: checkbox
+    subQuestions: '101, 102'
+    responseOptions: ''
+    externalUse: true
+    section: '@section6'
+  question101:
+    description: What
+    type: text
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section6'
+  question102:
+    description: Total worth
+    type: rangeInput
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section6'
+  question103:
+    description: Physical Violence and Mental Abuse
+    type: none
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section7'
+  question104:
+    description: 'When was the last time you participated in a physical fight?  '
+    type: number
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section7'
+  question105:
+    description: 'Have you ever engaged in any mental abuse? '
+    type: checkbox
+    subQuestions: '106'
+    responseOptions: ''
+    externalUse: true
+    section: '@section7'
+  question106:
+    description: Please provide explanation
+    type: text
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section7'
+  question107:
+    description:
+      Have you treated every person fairly and politely, without prejudice,
+      regardless of their race, creed, gender, or sexual preference?
+    type: checkbox
+    subQuestions: '108'
+    responseOptions: ''
+    externalUse: true
+    section: '@section7'
+  question108:
+    description: Please provide explanation
+    type: text
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section7'
+  question109:
+    description: Are you applying for a FIRE DEPARTMENT?
+    type: checkbox
+    subQuestions: '110'
+    responseOptions: ''
+    externalUse: true
+    section: '@section7'
+  question110:
+    description: Have you engaged in any acts of illegal fire setting?
+    type: text
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section7'
+  question111:
+    description: Are you applying at the COLORADO PARKS AND WILDLIFE?
+    type: checkbox
+    subQuestions: '112'
+    responseOptions: ''
+    externalUse: true
+    section: '@section7'
+  question112:
+    description:
+      Have you ever violated any laws or regulations regarding parks or wildlife
+      rules (e.g., hunting or fishing without a license)? Please describe when and
+      where.
+    type: text
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section7'
+  question113:
+    description: Law Enforcement Power Abuse
+    type: none
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section7'
+  question114:
+    description:
+      Have you ever had any law enforcement powers? (Worked for a police
+      department/corrections, etc.) 
+    type: checkbox
+    subQuestions: '115'
+    responseOptions: ''
+    externalUse: true
+    section: '@section7'
+  question115:
+    description: Have you participated in any of the following activities?
+    type: radioButtonGroup
+    subQuestions: ''
+    responseOptions:
+      Excessive force, Taking bribes, Manufacturing probable cause, Professional
+      courtesy/fixing traffic tickets, Taking contraband into jail, Falsifying
+      records, Accepting gratuities or discounts, Accessing criminal databases for
+      personal use, Mishandling of evidence
+    externalUse: true
+    section: '@section7'
+  question116:
+    description: Illegal Sexual Activities
+    type: none
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section7'
+  question117:
+    description:
+      Have you ever participated in any of the following activities (please note
+      that admissions in this section are not automatic disqualifiers)? 
+    type: radioButtonGroup
+    subQuestions: ''
+    responseOptions:
+      Rape, Date rape, Child molestation, Prostitution or pimping, Public indecent
+      exposure, Child pornography, Bestiality, Sexual harassment, Incest, Sex in
+      public locations, Peeping
+    externalUse: true
+    section: '@section7'
+  question118:
+    description: 'Financial Information'
+    type: 'none'
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section8'
+  question119:
+    description: Have you ever filed for bankruptcy?
+    type: checkbox
+    subQuestions: '120'
+    responseOptions: ''
+    externalUse: true
+    section: '@section8'
+  question120:
+    description: 'Please provide date, amount, reason'
+    type: text
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section8'
+  question121:
+    description: Are any of your bills more than 30 days past due?
+    type: checkbox
+    subQuestions: '122'
+    responseOptions: ''
+    externalUse: true
+    section: '@section8'
+  question122:
+    description: 'Please provide number of bills behind, how long, explanation'
+    type: text
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section8'
+  question123:
+    description:
+      Do you currently have any judgments, garnishments, court actions, or pending
+      actions against you for any money you owe anyone?
+    type: checkbox
+    subQuestions: '124'
+    responseOptions: ''
+    externalUse: true
+    section: '@section8'
+  question124:
+    description: Please provide explanation
+    type: text
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section8'
+  question125:
+    description: Do you have any bills that are currently in collections?
+    type: checkbox
+    subQuestions: '126'
+    responseOptions: ''
+    externalUse: true
+    section: '@section8'
+  question126:
+    description: 'Please provide number of bills, total amount, explanation'
+    type: text
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section8'
+  question127:
+    description: Are you currently behind on any child support payments?
+    type: checkbox
+    subQuestions: '128'
+    responseOptions: ''
+    externalUse: true
+    section: '@section8'
+  question128:
+    description: Please provide explanation
+    type: text
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section8'
