@@ -2,7 +2,7 @@ import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from "typeorm";
 import { UserDomainRole } from './UserDomainRole'
 import { Submission } from './Submission'
 
-@Entity()
+@Entity({name: 'user'})
 export class User {
 
   @PrimaryGeneratedColumn()

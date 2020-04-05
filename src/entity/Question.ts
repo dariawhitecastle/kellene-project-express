@@ -1,24 +1,34 @@
-import { Entity, PrimaryGeneratedColumn, Column, OneToOne, ManyToOne, OneToMany } from "typeorm";
-import { Answer } from './Answer'
-import { Section } from "./Section";
+import {
+  Entity,
+  PrimaryGeneratedColumn,
+  Column,
+  ManyToOne,
+  OneToMany
+} from 'typeorm';
+import { Answer } from './Answer';
+import { Section } from './Section';
 
-@Entity()
-export class Question { 
-    @PrimaryGeneratedColumn()
-    id: number;
+@Entity({ name: 'question' })
+export class Question {
+  @PrimaryGeneratedColumn() id: number;
 
-    @Column()
-    description: string;
+  @Column() description: string;
 
-    @Column()
-    responseOptions: string;
+  @Column() type: string;
 
-    @Column()
-    externalUse: boolean;
+  @Column() order: number;
 
-    @ManyToOne(type => Section, section => section.question)
-    public section: Section;
+  @Column({ type: 'simple-array', nullable: true })
+  subQuestions: number[];
 
-    @OneToMany(type => Answer, answer => answer.question)
-    public answer: Answer[]
+  @Column({ type: 'simple-array', nullable: true })
+  responseOptions: string[];
+
+  @Column() externalUse: boolean;
+
+  @ManyToOne((type) => Section, (section) => section.question)
+  public section: Section;
+
+  @OneToMany((type) => Answer, (answer) => answer.question)
+  public answer: Answer[];
 }
