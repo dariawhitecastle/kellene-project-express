@@ -3,6 +3,7 @@ items:
   question1:
     description: Name (First, Middle and Last)
     type: text
+    order: 1
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -10,6 +11,7 @@ items:
   question2:  
     description: Street Address
     type: text
+    order: 2
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -17,6 +19,7 @@ items:
   question3:  
     description: City
     type: text
+    order: 3
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -24,6 +27,7 @@ items:
   question4:    
     description: State
     type: dropdown
+    order: 4
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -31,6 +35,7 @@ items:
   question5:    
     description: Zip
     type: number
+    order: 5
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -38,6 +43,7 @@ items:
   question6:
     description: Date of Birth
     type: date
+    order: 6
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -45,6 +51,7 @@ items:
   question7:  
     description: Last 4 digits of SSN
     type: number
+    order: 7
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -54,6 +61,7 @@ items:
       Is this an application for the City and County of Denver or the Denver Civil
       Service Commission (Police or Fire)?
     type: checkbox
+    order: 8
     subQuestions: '9, 10, 11'
     responseOptions: ''
     externalUse: true
@@ -61,6 +69,7 @@ items:
   question9:  
     description: Place of birth
     type: text
+    order: 9
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -68,6 +77,7 @@ items:
   question10:
     description: Are you a US citizen?
     type: checkbox
+    order: 10
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -75,6 +85,7 @@ items:
   question11:
     description: 'If not, are you legal to work in the United States?'
     type: checkbox
+    order: 11
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -82,6 +93,7 @@ items:
   question12:
     description: Have you ever taken a polygraph or voice stress examination (CVSA)?
     type: checkbox
+    order: 12
     subQuestions: '13'
     responseOptions: ''
     externalUse: true
@@ -91,6 +103,7 @@ items:
       List all exams you have taken, for whom and when (agency and estimated
       month/year are acceptable).
     type: text
+    order: 13
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -98,6 +111,7 @@ items:
   question14:
     description: When was the last time you slept?
     type: radio
+    order: 14
     subQuestions: ''
     responseOptions: 'Last night, Yesterday, Before Yesterday'
     externalUse: true
@@ -105,6 +119,7 @@ items:
   question15:
     description: Number of hours slept?
     type: number
+    order: 15
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -114,6 +129,7 @@ items:
       List all prescription medications, alcohol, or illegal drugs you have
       consumed in the last 24 hours.
     type: text
+    order: 16
     subQuestions: ''
     responseOptions: ''
     externalUse: false
@@ -123,6 +139,7 @@ items:
       Are you experiencing any physical discomfort that you think would affect
       this examination?
     type: checkbox
+    order: 17
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -132,6 +149,7 @@ items:
       List all the information you may have left off your application, or have
       incorrectly provided on your application. 
     type: text
+    order: 1
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -141,6 +159,7 @@ items:
       On any of your examinations or tests for the organization you are applying
       for, did you falsify any information or cheat in any way? 
     type: checbox
+    order: 2
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -150,6 +169,7 @@ items:
       How long do you intend to stay with this organization, if hired (in number
       of years)?
     type: number
+    order: 3
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -157,6 +177,7 @@ items:
   question23:
     description: Driving Record
     type: none
+    order: 1
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -164,6 +185,7 @@ items:
   question24:
     description: What state is your current drivers license issued in?
     type: dropdown
+    order: 2
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -173,6 +195,7 @@ items:
       Have you held a drivers license in any other state or country in the last 7
       years?
     type: checkbox
+    order: 3
     subQuestions: '26, 27'
     responseOptions: ''
     externalUse: true
@@ -180,6 +203,7 @@ items:
   question26:
     description: Where did you hold drivers license
     type: text
+    order: 4
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -187,6 +211,7 @@ items:
   question27:
     description: Date range (year to year is acceptable)
     type: text
+    order: 5
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -194,6 +219,7 @@ items:
   question28:
     description: 'List all traffic violations, photo radar tickets, and at fault traffic accidents in the last 7 years:'
     type: none
+    order: 6
     subQuestions: '29, 30, 31, 32, 33'
     responseOptions: ''
     externalUse: true
@@ -201,6 +227,7 @@ items:
   question29:
     description: Date (Month/Year)
     type: date
+    order: 7
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -208,6 +235,7 @@ items:
   question30:
     description: Location (City/State)
     type: text
+    order: 8
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -215,6 +243,7 @@ items:
   question31:
     description: Offense
     type: text
+    order: 9
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -222,6 +251,7 @@ items:
   question32:
     description: Outcome/Sentence
     type: text
+    order: 10
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -229,6 +259,7 @@ items:
   question33:
     description: Did you pay on time?
     type: checkbox
+    order: 11
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -238,6 +269,7 @@ items:
       Has your drivers license ever been suspended, restricted or revoked, or have
       you ever been denied a drivers license?
     type: checkbox
+    order: 12
     subQuestions: '35'
     responseOptions: ''
     externalUse: true
@@ -245,6 +277,7 @@ items:
   question35:
     description: 'List where, when and why '
     type: text
+    order: 13
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -252,6 +285,7 @@ items:
   question36:
     description: Education
     type: none
+    order: 14
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -261,6 +295,7 @@ items:
       List the high school you attended and all other schools you attended after
       high school. Include any police or fire academies.
     type: none
+    order: 15
     subQuestions: '37, 38, 39, 40'
     responseOptions: ''
     externalUse: true
@@ -268,6 +303,7 @@ items:
   question38:
     description: School Name
     type: test
+    order: 16
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -275,6 +311,7 @@ items:
   question39:
     description: Location (City/State)
     type: test
+    order: 17
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -282,6 +319,7 @@ items:
   question40:
     description: Years attended
     type: date
+    order: 18
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -289,6 +327,7 @@ items:
   question41:
     description: Degree/Certificate
     type: text
+    order: 19
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -296,6 +335,7 @@ items:
   question43:
     description: Work History
     type: none
+    order: 1
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -306,6 +346,7 @@ items:
       under the table jobs. Account for all periods of time over 60 days,
       including unemployment and self employment.
     type: none
+    order: 2
     subQuestions: '45, 46, 47, 48, 49'
     responseOptions: ''
     externalUse: true
@@ -313,6 +354,7 @@ items:
   question45:
     description: Company
     type: text
+    order: 3
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -320,6 +362,7 @@ items:
   question46:
     description: City/state
     type: text
+    order: 4
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -327,6 +370,7 @@ items:
   question47:
     description: Dates
     type: date
+    order: 5
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -334,6 +378,7 @@ items:
   question48:
     description: Position
     type: text
+    order: 6
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -341,6 +386,7 @@ items:
   question49:
     description: Why did you leave
     type: text
+    order: 7
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -350,6 +396,7 @@ items:
       List ALL the jobs you have been fired from, left by mutual decision, or have
       been asked to resign from.
     type: text
+    order: 8
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -357,6 +404,7 @@ items:
   question51:
     description: Have you ever had any disciplinary actions taken against you?
     type: checkbox
+    order: 9
     subQuestions: '52, 53, 54, 55'
     responseOptions: ''
     externalUse: true
@@ -364,6 +412,7 @@ items:
   question52:
     description: Date
     type: date
+    order: 10
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -371,6 +420,7 @@ items:
   question53:
     description: Description of Incident
     type: text
+    order: 11
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -378,6 +428,7 @@ items:
   question54:
     description: 'Action (write up, suspension, etc)'
     type: text
+    order: 12
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -385,6 +436,7 @@ items:
   question55:
     description: Employer
     type: text
+    order: 13
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -392,6 +444,7 @@ items:
   question56:
     description: 'Military Service '
     type: none
+    order: 14
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -399,6 +452,7 @@ items:
   question57:
     description: 'Have you ever served in the military, for any length of time?'
     type: checkbox
+    order: 15
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -406,6 +460,7 @@ items:
   question58:
     description: Branch
     type: text
+    order: 16
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -413,6 +468,7 @@ items:
   question59:
     description: 'Dates of service '
     type: date
+    order: 17
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -422,6 +478,7 @@ items:
       Any disciplinary actions, court martials, or judicial actions? (Including
       negative counselings and letters of reprimand)
     type: checkbox
+    order: 18
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -429,6 +486,7 @@ items:
   question61:
     description: 'If yes: please explain'
     type: text
+    order: 19
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -436,6 +494,7 @@ items:
   question62:
     description: 'Highest rank obtained (e.g., E 4, O 2, etc.)'
     type: text
+    order: 20
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -443,6 +502,7 @@ items:
   question64:
     description: Primary or last duty station
     type: text
+    order: 21
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -450,6 +510,7 @@ items:
   question65:
     description: Type of discharge
     type: dropdown
+    order: 22
     subQuestions: ''
     responseOptions:
       Honorable, General, General Under Honorable, Other Than Honorable, Bad
@@ -459,6 +520,7 @@ items:
   question66:
     description: Rank at discharge
     type: text
+    order: 23
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -466,6 +528,7 @@ items:
   question67:
     description: Have you ever served in the active reserves?
     type: checkbox
+    order: 24
     subQuestions: '68'
     responseOptions: ''
     externalUse: true
@@ -473,6 +536,7 @@ items:
   question68:
     description: 'Where, when and rank'
     type: text
+    order: 25
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -480,6 +544,7 @@ items:
   question69:
     description: 'Criminal History'
     type: 'none'
+    order: 1
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -489,6 +554,7 @@ items:
       Please list all the times you have ever been arrested or charged with a
       criminal offense (Do not include minor traffic incidents)
     type: 'none'
+    order: 2
     subQuestions: '71, 72, 73, 74'
     responseOptions: ''
     externalUse: true
@@ -496,6 +562,7 @@ items:
   question71:
     description: Date
     type: date
+    order: 3
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -503,6 +570,7 @@ items:
   question72:
     description: Type of offense
     type: text
+    order: 4
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -510,6 +578,7 @@ items:
   question73:
     description: City/State
     type: text
+    order: 5
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -517,6 +586,7 @@ items:
   question74:
     description: Sentence
     type: text
+    order: 6
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -526,6 +596,7 @@ items:
       What are the most serious laws you have broken that you did not get caught
       for?
     type: none
+    order: 7
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -533,6 +604,7 @@ items:
   question76:
     description: What law
     type: text
+    order: 8
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -540,6 +612,7 @@ items:
   question77:
     description: Date of last occurence
     type: date
+    order: 9
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -547,6 +620,7 @@ items:
   question78:
     description: Explain
     type: text
+    order: 10
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -556,6 +630,7 @@ items:
       Are you now, or have you ever been, the subject of any criminal
       investigation? 
     type: checkbox
+    order: 11
     subQuestions: '80'
     responseOptions: ''
     externalUse: true
@@ -563,6 +638,7 @@ items:
   question80:
     description: 'Please explain:'
     type: text
+    order: 12
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -570,6 +646,7 @@ items:
   question81:
     description: 'Drug and Theft'
     type: 'none'
+    order: 1
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -580,6 +657,7 @@ items:
       drugs, such as the last time you used marijuana and the last time you used
       cocaine, etc.
     type: radio
+    order: 2
     subQuestions: ''
     responseOptions:
       Marijuana, Hashish, Cocaine, Crack cocaine, Speed, Downers, LSD/acid,
@@ -590,6 +668,7 @@ items:
   question83:
     description: Do you suspect you have ever been drugged?
     type: checkbox
+    order: 3
     subQuestions: '84'
     responseOptions: ''
     externalUse: true
@@ -597,6 +676,7 @@ items:
   question84:
     description: 'Please explain'
     type: text
+    order: 4
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -604,6 +684,7 @@ items:
   question85:
     description: 'Have you ever used someone else''s prescription medication, for any reason?'
     type: checkbox
+    order: 5
     subQuestions: '86'
     responseOptions: ''
     externalUse: true
@@ -611,6 +692,7 @@ items:
   question86:
     description: 'Please explain '
     type: text
+    order: 6
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -620,6 +702,7 @@ items:
       Have you ever inhaled any fumes or chemicals, such as glue, Whip its, or
       gasoline, for the purposes of getting high?
     type: checkbox
+    order: 7
     subQuestions: '88'
     responseOptions: ''
     externalUse: true
@@ -627,6 +710,7 @@ items:
   question88:
     description: 'Please explain '
     type: text
+    order: 8
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -634,6 +718,7 @@ items:
   question89:
     description: 'Have you ever used marijuana, alcohol, or any other illegal drugs at work?'
     type: checkbox
+    order: 9
     subQuestions: '90'
     responseOptions: ''
     externalUse: true
@@ -641,6 +726,7 @@ items:
   question90:
     description: 'Please explain '
     type: text
+    order: 10
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -648,6 +734,7 @@ items:
   question91:
     description: Drug Sales/Manufacturing
     type: none
+    order: 11
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -657,6 +744,7 @@ items:
       Which of the above illegal drugs have you ever sold or traded (even at
       cost), manufactured, or transported?
     type: text
+    order: 12
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -664,6 +752,7 @@ items:
   question93:
     description: 'Theft/Stealing '
     type: none
+    order: 13
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -673,6 +762,7 @@ items:
       In the past 10 years, have you, without permission, taken, given away or
       discounted any merchandise or property from your employers? 
     type: checkbox
+    order: 14
     subQuestions: '95, 96'
     responseOptions: ''
     externalUse: true
@@ -680,6 +770,7 @@ items:
   question95:
     description: What
     type: text
+    order: 15
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -687,6 +778,7 @@ items:
   question96:
     description: Total worth
     type: rangeInput
+    order: 17
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -696,6 +788,7 @@ items:
       In the past 10 years, have you, without permission, taken any money from
       your employers? 
     type: checkbox
+    order: 18
     subQuestions: '98, 99'
     responseOptions: ''
     externalUse: true
@@ -703,6 +796,7 @@ items:
   question98:
     description: What
     type: text
+    order: 19
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -710,6 +804,7 @@ items:
   question99:
     description: Total worth
     type: rangeInput
+    order: 20
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -719,6 +814,7 @@ items:
       Not counting employers, in the past 10 years, have you, without permission,
       taken, shoplifted or stolen from anyone (including shoplifting)? 
     type: checkbox
+    order: 21
     subQuestions: '101, 102'
     responseOptions: ''
     externalUse: true
@@ -726,6 +822,7 @@ items:
   question101:
     description: What
     type: text
+    order: 22
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -733,6 +830,7 @@ items:
   question102:
     description: Total worth
     type: rangeInput
+    order: 23
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -740,6 +838,7 @@ items:
   question103:
     description: Physical Violence and Mental Abuse
     type: none
+    order: 1
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -747,13 +846,15 @@ items:
   question104:
     description: 'When was the last time you participated in a physical fight?  '
     type: number
-    subQuestions: ''
+    order: 2
+    subQuestions:  ''
     responseOptions: ''
     externalUse: true
     section: '@section7'
   question105:
     description: 'Have you ever engaged in any mental abuse? '
     type: checkbox
+    order: 3
     subQuestions: '106'
     responseOptions: ''
     externalUse: true
@@ -761,6 +862,7 @@ items:
   question106:
     description: Please provide explanation
     type: text
+    order: 4
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -770,6 +872,7 @@ items:
       Have you treated every person fairly and politely, without prejudice,
       regardless of their race, creed, gender, or sexual preference?
     type: checkbox
+    order: 5
     subQuestions: '108'
     responseOptions: ''
     externalUse: true
@@ -777,6 +880,7 @@ items:
   question108:
     description: Please provide explanation
     type: text
+    order: 6
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -784,6 +888,7 @@ items:
   question109:
     description: Are you applying for a FIRE DEPARTMENT?
     type: checkbox
+    order: 7
     subQuestions: '110'
     responseOptions: ''
     externalUse: true
@@ -791,6 +896,7 @@ items:
   question110:
     description: Have you engaged in any acts of illegal fire setting?
     type: text
+    order: 8
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -798,6 +904,7 @@ items:
   question111:
     description: Are you applying at the COLORADO PARKS AND WILDLIFE?
     type: checkbox
+    order: 9
     subQuestions: '112'
     responseOptions: ''
     externalUse: true
@@ -808,6 +915,7 @@ items:
       rules (e.g., hunting or fishing without a license)? Please describe when and
       where.
     type: text
+    order: 10
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -815,6 +923,7 @@ items:
   question113:
     description: Law Enforcement Power Abuse
     type: none
+    order: 11
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -824,6 +933,7 @@ items:
       Have you ever had any law enforcement powers? (Worked for a police
       department/corrections, etc.) 
     type: checkbox
+    order: 12
     subQuestions: '115'
     responseOptions: ''
     externalUse: true
@@ -831,6 +941,7 @@ items:
   question115:
     description: Have you participated in any of the following activities?
     type: radioButtonGroup
+    order: 13
     subQuestions: ''
     responseOptions:
       Excessive force, Taking bribes, Manufacturing probable cause, Professional
@@ -842,6 +953,7 @@ items:
   question116:
     description: Illegal Sexual Activities
     type: none
+    order: 14
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -851,6 +963,7 @@ items:
       Have you ever participated in any of the following activities (please note
       that admissions in this section are not automatic disqualifiers)? 
     type: radioButtonGroup
+    order: 15
     subQuestions: ''
     responseOptions:
       Rape, Date rape, Child molestation, Prostitution or pimping, Public indecent
@@ -861,6 +974,7 @@ items:
   question118:
     description: 'Financial Information'
     type: 'none'
+    order: 1
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -868,6 +982,7 @@ items:
   question119:
     description: Have you ever filed for bankruptcy?
     type: checkbox
+    order: 2
     subQuestions: '120'
     responseOptions: ''
     externalUse: true
@@ -875,6 +990,7 @@ items:
   question120:
     description: 'Please provide date, amount, reason'
     type: text
+    order: 3
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -882,6 +998,7 @@ items:
   question121:
     description: Are any of your bills more than 30 days past due?
     type: checkbox
+    order: 4
     subQuestions: '122'
     responseOptions: ''
     externalUse: true
@@ -889,6 +1006,7 @@ items:
   question122:
     description: 'Please provide number of bills behind, how long, explanation'
     type: text
+    order: 5
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -898,6 +1016,7 @@ items:
       Do you currently have any judgments, garnishments, court actions, or pending
       actions against you for any money you owe anyone?
     type: checkbox
+    order: 6
     subQuestions: '124'
     responseOptions: ''
     externalUse: true
@@ -905,6 +1024,7 @@ items:
   question124:
     description: Please provide explanation
     type: text
+    order: 7
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -912,6 +1032,7 @@ items:
   question125:
     description: Do you have any bills that are currently in collections?
     type: checkbox
+    order: 8
     subQuestions: '126'
     responseOptions: ''
     externalUse: true
@@ -919,6 +1040,7 @@ items:
   question126:
     description: 'Please provide number of bills, total amount, explanation'
     type: text
+    order: 9
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -926,6 +1048,7 @@ items:
   question127:
     description: Are you currently behind on any child support payments?
     type: checkbox
+    order: 10
     subQuestions: '128'
     responseOptions: ''
     externalUse: true
@@ -933,6 +1056,7 @@ items:
   question128:
     description: Please provide explanation
     type: text
+    order: 11
     subQuestions: ''
     responseOptions: ''
     externalUse: true

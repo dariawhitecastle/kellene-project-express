@@ -6,22 +6,40 @@ require('dotenv').config({
 // imports
 import 'reflect-metadata';
 import { createConnection } from 'typeorm';
-import { User } from './entity/User'
-import { UserDomainRole } from './entity/UserDomainRole'
 import express from 'express';
+import morgan from 'morgan';
 import { PostRequestHandler } from './express';
-import bodyParser from 'body-parser';
+import { Request, Response } from 'express';
+import * as bodyParser from 'body-parser';
+import cors from 'cors';
+
+import { User } from './entity/User';
+import { UserDomainRole } from './entity/UserDomainRole';
+import { Question } from './entity/Question';
 
 // connection
 import config from './typeorm.config';
 createConnection(config)
   .then(async (connection) => {
     // app
-    const { EXPRESS_TYPEORM_PORT: PORT = 3000 } = process.env;
+    const { EXPRESS_TYPEORM_PORT: PORT = 1337 } = process.env;
     const baseUrl = `http://localhost:${PORT}`;
 
     const app = express();
+    app.use(cors());
     app.use(bodyParser.json());
+    app.use(morgan('dev'));
+
+    // Question
+
+    const questionRepository = connection.getRepository(Question);
+
+    app.get('/question', async (req: Request, res: Response) => {
+      const questions = await questionRepository.find({
+        relations: [ 'section' ]
+      });
+      return res.send(questions);
+    });
 
     // User
     const userRepository = connection.getRepository(User);
@@ -35,26 +53,26 @@ createConnection(config)
       })
     );
 
-    app.post(
-      '/find-user-by-id',
-      PostRequestHandler(async ({ id }) => userRepository.findOne(id))
-    );
-    app.post(
-      '/delete-user-by-id',
-      PostRequestHandler(async ({ id }) => userRepository.delete(id))
-    );
+    // app.post(
+    //   '/find-user-by-id',
+    //   PostRequestHandler(async ({ id }) => userRepository.findOne(id))
+    // );
+    // app.post(
+    //   '/delete-user-by-id',
+    //   PostRequestHandler(async ({ id }) => userRepository.delete(id))
+    // );
 
     // UserDomainRole
-    const userDomainRolesRepository = connection.getRepository(UserDomainRole);
-    app.post(
-      '/create-user-domain-role',
-      PostRequestHandler(async (body) => {
-        const userDomainRole = new UserDomainRole();
-        Object.assign(userDomainRole, body);
-        await userDomainRolesRepository.save(userDomainRole);
-        return userDomainRole;
-      })
-    );
+    // const userDomainRolesRepository = connection.getRepository(UserDomainRole);
+    // app.post(
+    //   '/create-user-domain-role',
+    //   PostRequestHandler(async (body) => {
+    //     const userDomainRole = new UserDomainRole();
+    //     Object.assign(userDomainRole, body);
+    //     await userDomainRolesRepository.save(userDomainRole);
+    //     return userDomainRole;
+    //   })
+    // );
 
     app.listen(PORT, () => console.log('app listening on', PORT));
   })
