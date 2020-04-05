@@ -1,6 +1,6 @@
 #!/bin/sh
 
-export $(egrep -v '^#' ../.env | xargs) >/dev/null
+export $(egrep -v '^#' .env | xargs) >/dev/null
 
 echo $EXPRESS_TYPEORM_PGDATABASE
 
