@@ -8,7 +8,7 @@ import {
 import { Answer } from './Answer';
 import { Section } from './Section';
 
-@Entity({ name: 'question' })
+@Entity()
 export class Question {
   @PrimaryGeneratedColumn() id: number;
 

@@ -16,6 +16,7 @@ import cors from 'cors';
 import { User } from './entity/User';
 import { UserDomainRole } from './entity/UserDomainRole';
 import { Question } from './entity/Question';
+import { Section } from './entity/Section';
 
 // connection
 import config from './typeorm.config';
@@ -30,15 +31,14 @@ createConnection(config)
     app.use(bodyParser.json());
     app.use(morgan('dev'));
 
-    // Question
-
-    const questionRepository = connection.getRepository(Question);
+    // Section
+    const sectionRepository = connection.getRepository(Section);
 
     app.get('/question', async (req: Request, res: Response) => {
-      const questions = await questionRepository.find({
-        relations: [ 'section' ]
+      const sections = await sectionRepository.find({
+        relations: [ 'question' ]
       });
-      return res.send(questions);
+      return res.send(sections);
     });
 
     // User
