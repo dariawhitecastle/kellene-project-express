@@ -35,7 +35,7 @@
   "scripts": {
     "start": "node dist/index.js",
     "dev": "ts-node-dev src/index.ts --watch .env",
-    "test": "jest -c ../../jest.unit.js $PWD",
+    "test": "jest -c jest.unit.js src/",
     "build": "tsc -b -v",
     "clean": "tsc -b --clean",
     "prepare": "yarn clean; yarn build",
