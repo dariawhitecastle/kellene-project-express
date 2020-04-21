@@ -1,4 +1,4 @@
-import * as F from '.'
+import * as F from './fp'
 
 describe('F', () => {
   it('renameKeys', () => {

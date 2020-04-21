@@ -8,7 +8,7 @@ import 'reflect-metadata';
 import { createConnection } from 'typeorm';
 import express from 'express';
 import morgan from 'morgan';
-import { PostRequestHandler } from './express';
+import { PostRequestHandler, RequestHandler } from './express';
 import { Request, Response } from 'express';
 import * as bodyParser from 'body-parser';
 import cors from 'cors';
@@ -20,6 +20,7 @@ import { Section } from './entity/Section';
 
 // connection
 import config from './typeorm.config';
+import { Submission } from './entity/Submission';
 createConnection(config)
   .then(async (connection) => {
     // app
@@ -36,7 +37,7 @@ createConnection(config)
 
     app.get('/question', async (req: Request, res: Response) => {
       const sections = await sectionRepository.find({
-        relations: [ 'question' ]
+        relations: ['question']
       });
       return res.send(sections);
     });
@@ -52,6 +53,20 @@ createConnection(config)
         return user;
       })
     );
+
+    // Submission
+    const submissionsRepository = connection.getRepository(Submission)
+    app.post('/submissions', RequestHandler(async (body: any) => {
+      const submission = Object.assign(new Submission(), body)
+      await submissionsRepository.save(submission)
+      return submission
+    }))
+
+    // /submissions?caseId=xxx,lastName=yyy
+    app.get('/submissions', RequestHandler(
+      (query) => submissionsRepository.find(query),
+      ['query'],
+    ))
 
     // app.post(
     //   '/find-user-by-id',
