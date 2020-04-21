@@ -5,14 +5,15 @@ import { Answer } from './Answer'
 import { User } from './User'
 
 @Entity()
-export class Submission { 
+export class Submission {
     @PrimaryGeneratedColumn()
     id: number;
+
+    @Column() caseId: number;
 
     @ManyToOne(type => User, user => user.submission)
     public user: User;
 
     @ManyToOne(type => Answer, answer => answer.submission)
-    public answer: Answer[]
-
+    public answer: Answer[];
 }
