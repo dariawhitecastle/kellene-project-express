@@ -34,5 +34,4 @@ const config: ConnectionOptions = {
   }
 };
 
-console.log(config);
 export = config;
