@@ -37,7 +37,7 @@ createConnection(config)
 
     app.get('/question', async (req: Request, res: Response) => {
       const sections = await sectionRepository.find({
-        relations: ['question']
+        relations: [ 'question' ]
       });
       return res.send(sections);
     });
@@ -55,18 +55,21 @@ createConnection(config)
     );
 
     // Submission
-    const submissionsRepository = connection.getRepository(Submission)
-    app.post('/submissions', RequestHandler(async (body: any) => {
-      const submission = Object.assign(new Submission(), body)
-      await submissionsRepository.save(submission)
-      return submission
-    }))
+    const submissionsRepository = connection.getRepository(Submission);
+    app.post(
+      '/submissions',
+      RequestHandler(async (body: any) => {
+        const submission = Object.assign(new Submission(), body);
+        await submissionsRepository.save(submission);
+        return submission;
+      })
+    );
 
     // /submissions?caseId=xxx,lastName=yyy
-    app.get('/submissions', RequestHandler(
-      (query) => submissionsRepository.find(query),
-      ['query'],
-    ))
+    app.get(
+      '/submissions',
+      RequestHandler((query) => submissionsRepository.find(query), [ 'query' ])
+    );
 
     // app.post(
     //   '/find-user-by-id',

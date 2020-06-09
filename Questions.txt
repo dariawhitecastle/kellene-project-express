@@ -448,7 +448,7 @@ items:
     section: '@section5'
   question46:
     description: City/state
-    type: table
+    type: text
     placeholder:
     order: 4
     subQuestions: ''
@@ -457,7 +457,7 @@ items:
     section: '@section5'
   question47:
     description: From-To
-    type: table
+    type: text
     placeholder:
     order: 5
     subQuestions: ''
@@ -523,17 +523,26 @@ items:
     section: '@section5'
   question52:
     description: Date
-    type: table
+    type: text
     order: 12
     placeholder: Date
     subQuestions: ''
     responseOptions: ''
     externalUse: true
     section: '@section5'
+  question53:
+    description: Explanation
+    type: text
+    order: 13
+    placeholder: Description of Incident
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section5'
   question54:
     description: Employer
-    type: table
-    order: 13
+    type: text
+    order: 14
     placeholder: Employer
     subQuestions: ''
     responseOptions: ''
@@ -541,23 +550,14 @@ items:
     section: '@section5'
   question55:
     description: 'Action'
-    type: table
-    order: 14
+    type: text
+    order: 15
     placeholder: Action (write up, suspension, etc)
     charLimit: 140
     subQuestions: ''
     responseOptions: ''
     externalUse: true
     section: '@section5' 
-  question53:
-    description: Explanation
-    type: table
-    order: 15
-    placeholder: Description of Incident
-    subQuestions: ''
-    responseOptions: ''
-    externalUse: true
-    section: '@section5'  
   question137:
     description: Add More
     type: button

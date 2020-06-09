@@ -1,7 +1,7 @@
 import {MigrationInterface, QueryRunner} from "typeorm";
 
-export class InitialMigration1586739710886 implements MigrationInterface {
-    name = 'InitialMigration1586739710886'
+export class OrderedSections1587927037107 implements MigrationInterface {
+    name = 'OrderedSections1587927037107'
 
     public async up(queryRunner: QueryRunner): Promise<any> {
         await queryRunner.query(`CREATE TABLE "application" ("id" SERIAL NOT NULL, CONSTRAINT "PK_569e0c3e863ebdf5f2408ee1670" PRIMARY KEY ("id"))`, undefined);
@@ -11,7 +11,7 @@ export class InitialMigration1586739710886 implements MigrationInterface {
         await queryRunner.query(`CREATE TABLE "role" ("id" SERIAL NOT NULL, "name" character varying NOT NULL, CONSTRAINT "PK_b36bcfe02fc8de3c57a8b2391c2" PRIMARY KEY ("id"))`, undefined);
         await queryRunner.query(`CREATE TABLE "user_domain_role" ("id" SERIAL NOT NULL, "emailAddress" character varying NOT NULL, "userId" integer, "roleId" integer, CONSTRAINT "PK_6b69b13503e2138c824ace28786" PRIMARY KEY ("id"))`, undefined);
         await queryRunner.query(`CREATE TABLE "user" ("id" SERIAL NOT NULL, "firstName" character varying NOT NULL, "lastName" character varying NOT NULL, "emailAddress" character varying NOT NULL, CONSTRAINT "PK_cace4a159ff9f2512dd42373760" PRIMARY KEY ("id"))`, undefined);
-        await queryRunner.query(`CREATE TABLE "submission" ("id" SERIAL NOT NULL, "userId" integer, "answerId" integer, CONSTRAINT "PK_7faa571d0e4a7076e85890c9bd0" PRIMARY KEY ("id"))`, undefined);
+        await queryRunner.query(`CREATE TABLE "submission" ("id" SERIAL NOT NULL, "caseId" integer NOT NULL, "userId" integer, "answerId" integer, CONSTRAINT "PK_7faa571d0e4a7076e85890c9bd0" PRIMARY KEY ("id"))`, undefined);
         await queryRunner.query(`CREATE TABLE "answer" ("id" SERIAL NOT NULL, "body" character varying NOT NULL, "responseSelection" character varying NOT NULL, "submissionId" integer, "questionId" integer, "noteId" integer, CONSTRAINT "REL_5fa39e8f57383ff0c3f26a5a15" UNIQUE ("noteId"), CONSTRAINT "PK_9232db17b63fb1e94f97e5c224f" PRIMARY KEY ("id"))`, undefined);
         await queryRunner.query(`ALTER TABLE "section" ADD CONSTRAINT "FK_90d9e517f8986d46dbec4f99cc6" FOREIGN KEY ("applicationId") REFERENCES "application"("id") ON DELETE NO ACTION ON UPDATE NO ACTION`, undefined);
         await queryRunner.query(`ALTER TABLE "question" ADD CONSTRAINT "FK_c0dcb2fbd1522ea83d4750de69d" FOREIGN KEY ("sectionId") REFERENCES "section"("id") ON DELETE NO ACTION ON UPDATE NO ACTION`, undefined);

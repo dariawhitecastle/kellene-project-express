@@ -18,6 +18,12 @@ export class Question {
 
   @Column() order: number;
 
+  @Column({ nullable: true })
+  charLimit: number;
+
+  @Column({ nullable: true })
+  placeholder: string;
+
   @Column({ type: 'simple-array', nullable: true })
   subQuestions: number[];
 
