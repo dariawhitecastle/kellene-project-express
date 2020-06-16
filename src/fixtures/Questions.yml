@@ -93,7 +93,7 @@ items:
     description:
       Is this an application for the City and County of Denver or the Denver Civil
       Service Commission (Police or Fire)?
-    type: checkbox
+    type: yesNo reverse
     placeholder:
     required: true
     order: 10
@@ -113,7 +113,7 @@ items:
     section: '@section8'
   question10:
     description: Are you a US citizen?
-    type: checkbox
+    type: yesNo
     placeholder:
     order: 12
     subQuestions: ''
@@ -122,7 +122,7 @@ items:
     section: '@section8'
   question11:
     description: 'If not, are you legal to work in the United States?'
-    type: checkbox
+    type: yesNo
     placeholder:
     order: 13
     subQuestions: ''
@@ -131,7 +131,7 @@ items:
     section: '@section8'
   question12:
     description: Have you ever taken a polygraph or voice stress examination (CVSA)?
-    type: checkbox
+    type: yesNo
     placeholder:
     order: 14
     subQuestions: '15'
@@ -186,7 +186,7 @@ items:
     description:
       Are you experiencing any physical discomfort that you think would affect
       this examination?
-    type: checkbox
+    type: yesNo
     placeholder:
     required: true
     order: 19
@@ -222,7 +222,7 @@ items:
     description:
       On any of your examinations or tests for the organization you are applying
       for, did you falsify any information or cheat in any way?
-    type: checkbox
+    type: yesNo
     placeholder:
     required: true
     order: 2
@@ -238,6 +238,15 @@ items:
     placeholder: '20'
     required: true
     order: 3
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section7'
+  question22:
+    description: What other applications do you currently have in active process?
+    type: textArea
+    placeholder:
+    order: 4
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -265,7 +274,7 @@ items:
     description:
       Have you held a driver's license in any other state or country in the last 7
       years?
-    type: checkbox
+    type: yesNo
     placeholder:
     required: true
     order: 3
@@ -342,7 +351,7 @@ items:
     section: '@section6'
   question33:
     description: Did you pay any of these late?
-    type: checkbox
+    type: yesNo
     order: 12
     placeholder: Yes
     subQuestions: '13'
@@ -361,9 +370,9 @@ items:
     section: '@section6'
   question34:
     description:
-      Has your driver's license ever been suspended, restricted or revoked, or have
-      you ever been denied a driver's license?
-    type: checkbox
+      Has your drivers license ever been suspended, restricted or revoked, or have
+      you ever been denied a drivers license?
+    type: yesNo
     required: true
     order: 14
     subQuestions: '15'
@@ -552,7 +561,7 @@ items:
     section: '@section5'
   question51:
     description: Have you ever had any disciplinary actions taken against you?
-    type: checkbox
+    type: yesNo
     placeholder:
     required: true
     order: 11
@@ -601,20 +610,27 @@ items:
     responseOptions: ''
     externalUse: true
     section: '@section5'
+  question137:
+    description: Add More
+    type: button
+    order: 16
+    subQuestions: ''
+    responseOptions: '12,13,14,15'
+    externalUse: true
+    section: '@section5'
   question56:
     description: 'Military Service'
     type: none
-    order: 16
+    order: 17
     subQuestions: ''
     responseOptions: ''
     externalUse: true
     section: '@section5'
   question57:
     description: 'Have you ever served in the military, for any length of time?'
-    type: checkbox
-    required: true
-    order: 17
-    subQuestions: '18,19,20,22,23,24,25,26'
+    type: yesNo
+    order: 18
+    subQuestions: '19,20,22,23,24,25,26,27'
     responseOptions: ''
     externalUse: true
     section: '@section5'
@@ -623,7 +639,7 @@ items:
     type: text
     placeholder: 'US Army'
     required: false
-    order: 18
+    order: 19
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -633,7 +649,7 @@ items:
     type: text
     placeholder: '8/10-8/14'
     required: false
-    order: 19
+    order: 20
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -642,11 +658,11 @@ items:
     description:
       Any disciplinary actions, court martials, or judicial actions? (Including
       negative counselings and letters of reprimand)
-    type: checkbox
+    type: yesNo
     placeholder:
     required: false
-    order: 20
-    subQuestions: '21'
+    order: 21
+    subQuestions: '22'
     responseOptions: ''
     externalUse: true
     section: '@section5'
@@ -655,7 +671,7 @@ items:
     type: textArea
     placeholder: 'Article 15 in 6/13'
     required: false
-    order: 21
+    order: 22
     charLimit: 200
     subQuestions: ''
     responseOptions: ''
@@ -666,7 +682,7 @@ items:
     type: text
     placeholder: 'E-5'
     required: false
-    order: 22
+    order: 23
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -676,7 +692,7 @@ items:
     type: text
     placeholder: '11B Infantry'
     required: false
-    order: 23
+    order: 24
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -686,7 +702,7 @@ items:
     type: text
     placeholder: 'Fort Carson, CO'
     required: false
-    order: 24
+    order: 25
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -695,7 +711,7 @@ items:
     description: Type of discharge
     type: dropdown
     placeholder:
-    order: 25
+    order: 26
     subQuestions: ''
     responseOptions:
       Honorable, General, General Under Honorable, Other Than Honorable, Bad
@@ -707,18 +723,18 @@ items:
     type: text
     placeholder: 'E-5'
     required: false
-    order: 26
+    order: 27
     subQuestions: ''
     responseOptions: ''
     externalUse: true
     section: '@section5'
   question67:
     description: Have you ever served in the active reserves?
-    type: checkbox
+    type: yesNo
     placeholder:
     required: true
-    order: 27
-    subQuestions: '28'
+    order: 28
+    subQuestions: '29'
     responseOptions: ''
     externalUse: true
     section: '@section5'
@@ -728,7 +744,7 @@ items:
     placeholder: 'Army National Guard, Fort Carson, CO, 2014-present, E-6'
     required: false
     charLimit: 140
-    order: 28
+    order: 29
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -831,7 +847,7 @@ items:
       Drug Usage (Please only list the last time you used any of the following
       drugs, such as the last time you used marijuana and the last time you used
       cocaine, etc.)
-    type: radio
+    type: checkBoxGroup
     placeholder:
     required: false
     order: 2
@@ -844,7 +860,7 @@ items:
     section: '@section3'
   question83:
     description: Do you suspect you have ever been drugged?
-    type: checkbox
+    type: yesNo
     placeholder:
     required: true
     order: 3
@@ -865,7 +881,7 @@ items:
     section: '@section3'
   question85:
     description: "Have you ever used someone else's prescription medication, for any reason?"
-    type: checkbox
+    type: yesNo
     placeholder:
     required: true
     order: 5
@@ -888,7 +904,7 @@ items:
     description:
       Have you ever inhaled any fumes or chemicals, such as glue, Whip its, or
       gasoline, for the purposes of getting high?
-    type: checkbox
+    type: yesNo
     placeholder:
     required: true
     order: 7
@@ -909,7 +925,7 @@ items:
     section: '@section3'
   question89:
     description: 'Have you ever used marijuana, alcohol, or any other illegal drugs at work?'
-    type: checkbox
+    type: yesNo
     placeholder:
     required: true
     order: 9
@@ -962,7 +978,7 @@ items:
     description:
       In the past 10 years, have you, without permission, taken, given away or
       discounted any merchandise or property from your employers?
-    type: checkbox
+    type: yesNo
     placeholder:
     required: true
     order: 14
@@ -983,7 +999,7 @@ items:
     section: '@section3'
   question96:
     description: Total worth
-    type: rangeSelector
+    type: text
     placeholder: '$250'
     required: false
     order: 17
@@ -995,7 +1011,7 @@ items:
     description:
       In the past 10 years, have you, without permission, taken any money from
       your employers?
-    type: checkbox
+    type: yesNo
     placeholder:
     required: true
     order: 18
@@ -1005,7 +1021,7 @@ items:
     section: '@section3'
   question99:
     description: Total worth
-    type: rangeSelector
+    type: text
     placeholder:
     order: 20
     subQuestions: ''
@@ -1016,7 +1032,7 @@ items:
     description:
       Not counting employers, in the past 10 years, have you, without permission,
       taken, shoplifted or stolen from anyone (including shoplifting)?
-    type: checkbox
+    type: yesNo
     placeholder:
     order: 21
     subQuestions: '22, 23'
@@ -1035,7 +1051,7 @@ items:
     section: '@section3'
   question102:
     description: Total worth
-    type: rangeSelector
+    type: text
     placeholder: '$300'
     required: false
     order: 23
@@ -1064,7 +1080,7 @@ items:
     section: '@section2'
   question105:
     description: 'Have you ever engaged in any mental abuse? '
-    type: checkbox
+    type: yesNo
     placeholder:
     required: true
     order: 3
@@ -1085,7 +1101,7 @@ items:
     section: '@section2'
   question107:
     description: Have you treated anyone unfairly based on their race, creed, gender, or sexual orientation?
-    type: checkbox
+    type: yesNo
     placeholder:
     required: true
     order: 5
@@ -1104,7 +1120,7 @@ items:
     section: '@section2'
   question109:
     description: Are you applying for a FIRE DEPARTMENT?
-    type: checkbox
+    type: yesNo
     placeholder:
     required: true
     order: 7
@@ -1124,7 +1140,7 @@ items:
     section: '@section2'
   question111:
     description: Are you applying at the COLORADO PARKS AND WILDLIFE?
-    type: checkbox
+    type: yesNo
     placeholder:
     required: true
     order: 9
@@ -1157,7 +1173,7 @@ items:
     description:
       Have you ever had any law enforcement powers? (Worked for a police
       department/corrections, etc.)
-    type: checkbox
+    type: yesNo
     placeholder:
     required: true
     order: 12
@@ -1209,7 +1225,7 @@ items:
     section: '@section1'
   question119:
     description: Have you ever filed for bankruptcy?
-    type: checkbox
+    type: yesNo
     placeholder:
     required: true
     order: 2
@@ -1230,8 +1246,7 @@ items:
     section: '@section1'
   question121:
     description: Are any of your bills more than 30 days past due?
-    type: checkbox
-    required: true
+    type: yesNo
     placeholder:
     order: 4
     subQuestions: '5'
@@ -1253,7 +1268,7 @@ items:
     description:
       Do you currently have any judgments, garnishments, court actions, or pending
       actions against you for any money you owe anyone?
-    type: checkbox
+    type: yesNo
     placeholder:
     required: true
     order: 6
@@ -1274,7 +1289,7 @@ items:
     section: '@section1'
   question125:
     description: Do you have any bills that are currently in collections?
-    type: checkbox
+    type: yesNo
     placeholder:
     required: true
     order: 8
@@ -1295,7 +1310,7 @@ items:
     section: '@section1'
   question127:
     description: Are you currently behind on any child support payments?
-    type: checkbox
+    type: yesNo
     placeholder:
     required: true
     order: 10
