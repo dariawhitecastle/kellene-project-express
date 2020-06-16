@@ -3,7 +3,8 @@ items:
   question1:
     description: First Name
     type: text
-    placeholder:
+    placeholder: 'John'
+    required: true
     order: 1
     subQuestions: ''
     responseOptions: ''
@@ -12,7 +13,8 @@ items:
   question129:
     description: Middle Name
     type: text
-    placeholder:
+    placeholder: 'James'
+    required: false
     order: 2
     subQuestions: ''
     responseOptions: ''
@@ -21,31 +23,34 @@ items:
   question130:
     description: Last Name
     type: text
-    placeholder:
+    placeholder: 'Smith'
+    required: true
     order: 3
     subQuestions: ''
     responseOptions: ''
     externalUse: true
-    section: '@section8'    
-  question2:  
+    section: '@section8'
+  question2:
     description: Street Address
     type: text
-    placeholder:
+    placeholder: '1234 Pleasant Pl'
+    required: true
     order: 4
     subQuestions: ''
     responseOptions: ''
     externalUse: true
     section: '@section8'
-  question3:  
+  question3:
     description: City
     type: text
-    placeholder:
+    placeholder: 'Pleasantville'
+    required: true
     order: 5
     subQuestions: ''
     responseOptions: ''
     externalUse: true
     section: '@section8'
-  question4:    
+  question4:
     description: State
     type: dropdown
     placeholder:
@@ -54,10 +59,11 @@ items:
     responseOptions: ''
     externalUse: true
     section: '@section8'
-  question5:    
+  question5:
     description: Zip
     type: number
-    placeholder:
+    placeholder: '11111'
+    required: true
     order: 7
     subQuestions: ''
     responseOptions: ''
@@ -66,36 +72,40 @@ items:
   question6:
     description: Date of Birth
     type: text
-    placeholder:
+    placeholder: '01/01/1990'
+    required: true
     order: 8
     subQuestions: ''
     responseOptions: ''
     externalUse: true
     section: '@section8'
-  question7:  
+  question7:
     description: Last 4 digits of SSN
     type: number
-    placeholder:
+    placeholder: '1234'
+    required: true
     order: 9
     subQuestions: ''
     responseOptions: ''
     externalUse: true
     section: '@section8'
   question8:
-    description: 
+    description:
       Is this an application for the City and County of Denver or the Denver Civil
       Service Commission (Police or Fire)?
     type: checkbox
     placeholder:
+    required: true
     order: 10
     subQuestions: '11,12,13'
     responseOptions: ''
     externalUse: true
     section: '@section8'
-  question9:  
+  question9:
     description: Place of birth
     type: text
-    placeholder:
+    placeholder: 'Pleasantville, CO'
+    required: true
     order: 11
     subQuestions: ''
     responseOptions: ''
@@ -129,11 +139,12 @@ items:
     externalUse: true
     section: '@section8'
   question13:
-    description: 
+    description:
       List all exams you have taken, for whom and when (agency and estimated
       month/year are acceptable).
     type: textArea
-    placeholder:
+    placeholder: 'Pleasantville PD 6/18- polygraph'
+    required: false
     order: 15
     subQuestions: ''
     responseOptions: ''
@@ -143,6 +154,7 @@ items:
     description: When was the last time you slept?
     type: radio
     placeholder:
+    required: true
     order: 16
     subQuestions: ''
     responseOptions: 'Today, Last night, Yesterday, Before Yesterday'
@@ -151,7 +163,8 @@ items:
   question15:
     description: Number of hours slept?
     type: number
-    placeholder:
+    placeholder: '7'
+    required: true
     order: 17
     subQuestions: ''
     responseOptions: ''
@@ -162,7 +175,8 @@ items:
       List all prescription medications, alcohol, or illegal drugs you have
       consumed in the last 24 hours.
     type: textArea
-    placeholder:
+    placeholder: 'One glass of wine, albuterol inhaler'
+    required: false
     order: 18
     subQuestions: ''
     responseOptions: ''
@@ -174,28 +188,31 @@ items:
       this examination?
     type: checkbox
     placeholder:
+    required: true
     order: 19
     subQuestions: '20'
     responseOptions: ''
     externalUse: true
     section: '@section8'
   question18:
-    description:
-     Please explain
+    description: Please explain
     type: textArea
-    placeholder:
+    placeholder: 'Pain in lower back'
+    required: false
     charLimit: 140
     order: 20
     subQuestions: ''
     responseOptions: ''
     externalUse: true
-    section: '@section8'  
+    section: '@section8'
   question19:
     description:
       List all the information you may have left off your application, or have
-      incorrectly provided on your application. 
+      incorrectly provided on your application.
     type: textArea
-    placeholder:
+    placeholder: 'Forgot 2 jobs and 1 address'
+    required: false
+    charLimit: 140
     order: 1
     subQuestions: ''
     responseOptions: ''
@@ -204,9 +221,10 @@ items:
   question20:
     description:
       On any of your examinations or tests for the organization you are applying
-      for, did you falsify any information or cheat in any way? 
+      for, did you falsify any information or cheat in any way?
     type: checkbox
     placeholder:
+    required: true
     order: 2
     subQuestions: ''
     responseOptions: ''
@@ -217,7 +235,8 @@ items:
       How long do you intend to stay with this organization, if hired (in number
       of years)?
     type: number
-    placeholder:
+    placeholder: '20'
+    required: true
     order: 3
     subQuestions: ''
     responseOptions: ''
@@ -233,9 +252,10 @@ items:
     externalUse: true
     section: '@section6'
   question24:
-    description: What state is your current drivers license issued in?
+    description: What state is your current driver's license issued in?
     type: dropdown
     placeholder:
+    required: true
     order: 2
     subQuestions: ''
     responseOptions: ''
@@ -243,19 +263,21 @@ items:
     section: '@section6'
   question25:
     description:
-      Have you held a drivers license in any other state or country in the last 7
+      Have you held a driver's license in any other state or country in the last 7
       years?
     type: checkbox
     placeholder:
+    required: true
     order: 3
     subQuestions: '4'
     responseOptions: ''
     externalUse: true
     section: '@section6'
   question26:
-    description: Where and when did you hold drivers license
+    description: Where and when did you hold driver's license?
     type: text
-    placeholder:
+    placeholder: 'North Carolina, 2015-18'
+    required: false
     order: 4
     subQuestions: ''
     responseOptions: ''
@@ -275,6 +297,7 @@ items:
     type: table
     order: 7
     placeholder: 11/2020
+    required: false
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -284,6 +307,7 @@ items:
     type: table
     order: 8
     placeholder: Denver, CO
+    required: false
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -293,6 +317,7 @@ items:
     type: table
     order: 9
     placeholder: Speeding
+    required: false
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -302,6 +327,7 @@ items:
     type: table
     order: 10
     placeholder: Citation
+    required: false
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -313,7 +339,7 @@ items:
     subQuestions: ''
     responseOptions: '7,8,9,10'
     externalUse: true
-    section: '@section6'  
+    section: '@section6'
   question33:
     description: Did you pay any of these late?
     type: checkbox
@@ -326,16 +352,19 @@ items:
   question136:
     description: Please explain
     type: textArea
+    placeholder: 'I lost the ticket'
+    required: false
     order: 13
     subQuestions: ''
     responseOptions: ''
     externalUse: true
-    section: '@section6'  
+    section: '@section6'
   question34:
     description:
-      Has your drivers license ever been suspended, restricted or revoked, or have
-      you ever been denied a drivers license?
+      Has your driver's license ever been suspended, restricted or revoked, or have
+      you ever been denied a driver's license?
     type: checkbox
+    required: true
     order: 14
     subQuestions: '15'
     responseOptions: ''
@@ -344,7 +373,8 @@ items:
   question35:
     description: 'List where, when and why'
     type: textArea
-    placeholder:
+    placeholder: 'Colorado, 2010-11, unpaid citation'
+    required: false
     order: 15
     charLimit: 140
     subQuestions: ''
@@ -365,7 +395,6 @@ items:
       List the high school you attended and all other schools you attended after
       high school. Include any police or fire academies.
     type: none
-    placeholder:
     order: 17
     subQuestions: ''
     responseOptions: ''
@@ -374,7 +403,8 @@ items:
   question38:
     description: School Name
     type: table
-    placeholder:
+    placeholder: 'Pleasantville High School'
+    required: true
     order: 18
     subQuestions: ''
     responseOptions: ''
@@ -383,7 +413,8 @@ items:
   question39:
     description: Location (City/State)
     type: table
-    placeholder:
+    placeholder: 'Pleasantville, CO'
+    required: true
     order: 19
     subQuestions: ''
     responseOptions: ''
@@ -392,7 +423,8 @@ items:
   question40:
     description: Years attended
     type: table
-    placeholder:
+    placeholder: '2010-14'
+    required: true
     order: 20
     subQuestions: ''
     responseOptions: ''
@@ -401,7 +433,8 @@ items:
   question41:
     description: Degree/Certificate
     type: table
-    placeholder:
+    placeholder: 'HS Diploma'
+    required: true
     order: 21
     subQuestions: ''
     responseOptions: ''
@@ -415,11 +448,10 @@ items:
     subQuestions: ''
     responseOptions: '18,19,20,21'
     externalUse: true
-    section: '@section6'  
+    section: '@section6'
   question43:
     description: Work History
     type: none
-    placeholder:
     order: 1
     subQuestions: ''
     responseOptions: ''
@@ -440,7 +472,8 @@ items:
   question45:
     description: Company
     type: table
-    placeholder:
+    placeholder: 'Pleasantville PD'
+    required: true
     order: 3
     subQuestions: ''
     responseOptions: ''
@@ -448,8 +481,9 @@ items:
     section: '@section5'
   question46:
     description: City/state
-    type: table
-    placeholder:
+    type: text
+    placeholder: 'Pleasantville, CO'
+    required: false
     order: 4
     subQuestions: ''
     responseOptions: ''
@@ -457,8 +491,9 @@ items:
     section: '@section5'
   question47:
     description: From-To
-    type: table
-    placeholder:
+    type: text
+    placeholder: '2010-present'
+    required: true
     order: 5
     subQuestions: ''
     responseOptions: ''
@@ -467,7 +502,8 @@ items:
   question48:
     description: Position
     type: text
-    placeholder:
+    placeholder: 'Police Officer'
+    required: false
     order: 6
     subQuestions: ''
     responseOptions: ''
@@ -476,7 +512,8 @@ items:
   question49:
     description: Why did you leave?
     type: text
-    placeholder:
+    placeholder: 'Moved'
+    required: false
     charLimit: 140
     order: 7
     subQuestions: ''
@@ -491,13 +528,14 @@ items:
     subQuestions: ''
     responseOptions: '3,4,5,6,7'
     externalUse: true
-    section: '@section5'  
+    section: '@section5'
   question50:
     description:
       List ALL the jobs you have been fired from, left by mutual decision, or have
       been asked to resign from.
     type: textArea
-    placeholder:
+    placeholder: 'Pleasantville PD'
+    required: false
     order: 9
     subQuestions: ''
     responseOptions: ''
@@ -511,65 +549,62 @@ items:
     subQuestions: ''
     responseOptions: ''
     externalUse: true
-    section: '@section5'  
+    section: '@section5'
   question51:
     description: Have you ever had any disciplinary actions taken against you?
     type: checkbox
     placeholder:
+    required: true
     order: 11
-    subQuestions: '12,13,14,15,16'
+    subQuestions: '12,13,14,15'
     responseOptions: ''
     externalUse: true
     section: '@section5'
   question52:
     description: Date
-    type: table
+    type: text
     order: 12
-    placeholder: Date
+    placeholder: '12/2015'
+    required: false
+    subQuestions: ''
+    responseOptions: ''
+    externalUse: true
+    section: '@section5'
+  question53:
+    description: Explanation
+    type: text
+    order: 13
+    placeholder: Description of Incident
+    required: false
     subQuestions: ''
     responseOptions: ''
     externalUse: true
     section: '@section5'
   question54:
     description: Employer
-    type: table
-    order: 13
+    type: text
+    order: 14
     placeholder: Employer
+    required: false
     subQuestions: ''
     responseOptions: ''
     externalUse: true
     section: '@section5'
   question55:
     description: 'Action'
-    type: table
-    order: 14
+    type: text
+    order: 15
     placeholder: Action (write up, suspension, etc)
+    required: false
     charLimit: 140
     subQuestions: ''
     responseOptions: ''
     externalUse: true
-    section: '@section5' 
-  question53:
-    description: Explanation
-    type: table
-    order: 15
-    placeholder: Description of Incident
-    subQuestions: ''
-    responseOptions: ''
-    externalUse: true
-    section: '@section5'  
-  question137:
-    description: Add More
-    type: button
-    order: 16
-    subQuestions: ''
-    responseOptions: '12,13,14,15'
-    externalUse: true
-    section: '@section5'       
+    section: '@section5'
   question56:
     description: 'Military Service'
     type: none
-    order: 17
+    order: 16
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -577,16 +612,18 @@ items:
   question57:
     description: 'Have you ever served in the military, for any length of time?'
     type: checkbox
-    order: 18
-    subQuestions: '19,20,22,23,24,25,26,27'
+    required: true
+    order: 17
+    subQuestions: '18,19,20,22,23,24,25,26'
     responseOptions: ''
     externalUse: true
     section: '@section5'
   question58:
     description: Branch
     type: text
-    placeholder:
-    order: 19
+    placeholder: 'US Army'
+    required: false
+    order: 18
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -594,8 +631,9 @@ items:
   question59:
     description: 'From-To'
     type: text
-    placeholder:
-    order: 20
+    placeholder: '8/10-8/14'
+    required: false
+    order: 19
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -606,16 +644,18 @@ items:
       negative counselings and letters of reprimand)
     type: checkbox
     placeholder:
-    order: 21
-    subQuestions: '22'
+    required: false
+    order: 20
+    subQuestions: '21'
     responseOptions: ''
     externalUse: true
     section: '@section5'
   question61:
     description: 'Please explain'
     type: textArea
-    placeholder:
-    order: 22
+    placeholder: 'Article 15 in 6/13'
+    required: false
+    order: 21
     charLimit: 200
     subQuestions: ''
     responseOptions: ''
@@ -624,8 +664,9 @@ items:
   question62:
     description: 'Highest rank obtained'
     type: text
-    placeholder:
-    order: 23
+    placeholder: 'E-5'
+    required: false
+    order: 22
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -633,17 +674,19 @@ items:
   question63:
     description: 'MOS'
     type: text
-    placeholder:
-    order: 24
+    placeholder: '11B Infantry'
+    required: false
+    order: 23
     subQuestions: ''
     responseOptions: ''
     externalUse: true
-    section: '@section5'  
+    section: '@section5'
   question64:
     description: Primary or last duty station
     type: text
-    placeholder:
-    order: 25
+    placeholder: 'Fort Carson, CO'
+    required: false
+    order: 24
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -652,7 +695,7 @@ items:
     description: Type of discharge
     type: dropdown
     placeholder:
-    order: 26
+    order: 25
     subQuestions: ''
     responseOptions:
       Honorable, General, General Under Honorable, Other Than Honorable, Bad
@@ -662,8 +705,9 @@ items:
   question66:
     description: Rank at discharge
     type: text
-    placeholder:
-    order: 27
+    placeholder: 'E-5'
+    required: false
+    order: 26
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -672,17 +716,19 @@ items:
     description: Have you ever served in the active reserves?
     type: checkbox
     placeholder:
-    order: 28
-    subQuestions: '29'
+    required: true
+    order: 27
+    subQuestions: '28'
     responseOptions: ''
     externalUse: true
     section: '@section5'
   question68:
     description: 'Where, when and rank'
     type: textArea
-    placeholder:
+    placeholder: 'Army National Guard, Fort Carson, CO, 2014-present, E-6'
+    required: false
     charLimit: 140
-    order: 29
+    order: 28
     subQuestions: ''
     responseOptions: ''
     externalUse: true
@@ -710,7 +756,8 @@ items:
   question71:
     description: Date
     type: table
-    placeholder:
+    placeholder: '05/2005'
+    required: false
     order: 3
     subQuestions: ''
     responseOptions: ''
@@ -719,7 +766,8 @@ items:
   question72:
     description: Type of offense
     type: table
-    placeholder:
+    placeholder: 'Shoplifting'
+    required: false
     order: 4
     charLimit: 40
     subQuestions: ''
@@ -729,7 +777,8 @@ items:
   question73:
     description: City/State
     type: table
-    placeholder:
+    placeholder: 'Pleasantville, CO'
+    required: false
     order: 5
     subQuestions: ''
     responseOptions: ''
@@ -738,7 +787,8 @@ items:
   question74:
     description: Sentence
     type: table
-    placeholder:
+    placeholder: 'Fines, community service, classes'
+    required: false
     order: 6
     charLimit: 50
     subQuestions: ''
@@ -753,13 +803,14 @@ items:
     subQuestions: ''
     responseOptions: '3,4,5,6'
     externalUse: true
-    section: '@section4'  
+    section: '@section4'
   question75:
     description:
       What are the most serious laws you have broken that you did not get caught
       for?
     type: textArea
-    placeholder:
+    placeholder: 'Drinking and driving'
+    required: true
     charLimit: 200
     order: 8
     subQuestions: ''
@@ -767,7 +818,7 @@ items:
     externalUse: true
     section: '@section4'
   question81:
-    description: 'Drug and Theft'
+    description: 'Illegal Drugs and Theft'
     type: 'none'
     placeholder:
     order: 1
@@ -779,9 +830,10 @@ items:
     description:
       Drug Usage (Please only list the last time you used any of the following
       drugs, such as the last time you used marijuana and the last time you used
-      cocaine, etc.
+      cocaine, etc.)
     type: radio
     placeholder:
+    required: false
     order: 2
     subQuestions: ''
     responseOptions:
@@ -794,6 +846,7 @@ items:
     description: Do you suspect you have ever been drugged?
     type: checkbox
     placeholder:
+    required: true
     order: 3
     subQuestions: '4'
     responseOptions: ''
@@ -803,6 +856,7 @@ items:
     description: 'Please explain'
     type: textArea
     placeholder:
+    required: false
     charLimit: 140
     order: 4
     subQuestions: ''
@@ -810,9 +864,10 @@ items:
     externalUse: true
     section: '@section3'
   question85:
-    description: 'Have you ever used someone else''s prescription medication, for any reason?'
+    description: "Have you ever used someone else's prescription medication, for any reason?"
     type: checkbox
     placeholder:
+    required: true
     order: 5
     subQuestions: '6'
     responseOptions: ''
@@ -821,7 +876,8 @@ items:
   question86:
     description: 'Please explain '
     type: textArea
-    placeholder:
+    placeholder: "Used mother's prescription allergy medication in 5/12"
+    required: false
     charLimit: 140
     order: 6
     subQuestions: ''
@@ -834,6 +890,7 @@ items:
       gasoline, for the purposes of getting high?
     type: checkbox
     placeholder:
+    required: true
     order: 7
     subQuestions: '8'
     responseOptions: ''
@@ -843,6 +900,7 @@ items:
     description: 'Please explain '
     type: textArea
     placeholder:
+    required: false
     charLimit: 140
     order: 8
     subQuestions: ''
@@ -853,6 +911,7 @@ items:
     description: 'Have you ever used marijuana, alcohol, or any other illegal drugs at work?'
     type: checkbox
     placeholder:
+    required: true
     order: 9
     subQuestions: '10'
     responseOptions: ''
@@ -861,7 +920,8 @@ items:
   question90:
     description: 'Please explain '
     type: textArea
-    placeholder:
+    placeholder: 'Went to work at Pleasantville Bar high on marijuana last in 4/2009'
+    required: false
     charLimit: 140
     order: 10
     subQuestions: ''
@@ -882,7 +942,8 @@ items:
       Which of the above illegal drugs have you ever sold or traded (even at
       cost), manufactured, or transported?
     type: textArea
-    placeholder:
+    placeholder: 'Sold marijuana at cost to friends in high school'
+    required: false
     order: 12
     subQuestions: ''
     responseOptions: ''
@@ -900,9 +961,10 @@ items:
   question94:
     description:
       In the past 10 years, have you, without permission, taken, given away or
-      discounted any merchandise or property from your employers? 
+      discounted any merchandise or property from your employers?
     type: checkbox
     placeholder:
+    required: true
     order: 14
     subQuestions: '15,16'
     responseOptions: ''
@@ -911,7 +973,9 @@ items:
   question95:
     description: What and most valuable item
     type: text
-    placeholder:
+    placeholder: 'Discounted clothing to friends without permission.'
+    required: false
+    charLimit: 140
     order: 15
     subQuestions: ''
     responseOptions: ''
@@ -920,7 +984,8 @@ items:
   question96:
     description: Total worth
     type: rangeSelector
-    placeholder:
+    placeholder: '$250'
+    required: false
     order: 17
     subQuestions: ''
     responseOptions: ''
@@ -929,9 +994,10 @@ items:
   question97:
     description:
       In the past 10 years, have you, without permission, taken any money from
-      your employers? 
+      your employers?
     type: checkbox
     placeholder:
+    required: true
     order: 18
     subQuestions: '20'
     responseOptions: ''
@@ -949,7 +1015,7 @@ items:
   question100:
     description:
       Not counting employers, in the past 10 years, have you, without permission,
-      taken, shoplifted or stolen from anyone (including shoplifting)? 
+      taken, shoplifted or stolen from anyone (including shoplifting)?
     type: checkbox
     placeholder:
     order: 21
@@ -960,7 +1026,8 @@ items:
   question101:
     description: What and most valuable item
     type: text
-    placeholder:
+    placeholder: 'Shoplifted clothing in 2017 worth $130'
+    required: false
     order: 22
     subQuestions: ''
     responseOptions: ''
@@ -969,7 +1036,8 @@ items:
   question102:
     description: Total worth
     type: rangeSelector
-    placeholder:
+    placeholder: '$300'
+    required: false
     order: 23
     subQuestions: ''
     responseOptions: ''
@@ -987,9 +1055,10 @@ items:
   question104:
     description: 'When was the last time you participated in a physical fight?  '
     type: number
-    placeholder:
+    placeholder: '9/2012'
+    required: false
     order: 2
-    subQuestions:  ''
+    subQuestions: ''
     responseOptions: ''
     externalUse: true
     section: '@section2'
@@ -997,6 +1066,7 @@ items:
     description: 'Have you ever engaged in any mental abuse? '
     type: checkbox
     placeholder:
+    required: true
     order: 3
     subQuestions: '4'
     responseOptions: ''
@@ -1005,17 +1075,19 @@ items:
   question106:
     description: Please explain
     type: textArea
-    placeholder:
+    placeholder: 'I threw items during a fight with my spouse to scare them'
+    required: false
+    charLimit: 140
     order: 4
     subQuestions: ''
     responseOptions: ''
     externalUse: true
     section: '@section2'
   question107:
-    description:
-      Have you treated anyone unfairly based on their race, creed, gender, or sexual orientation?
+    description: Have you treated anyone unfairly based on their race, creed, gender, or sexual orientation?
     type: checkbox
     placeholder:
+    required: true
     order: 5
     subQuestions: '6'
     responseOptions: ''
@@ -1024,7 +1096,7 @@ items:
   question108:
     description: Please explain
     type: textArea
-    placeholder:
+    placeholder: 'I was raised in a racist household'
     order: 6
     subQuestions: ''
     responseOptions: ''
@@ -1034,6 +1106,7 @@ items:
     description: Are you applying for a FIRE DEPARTMENT?
     type: checkbox
     placeholder:
+    required: true
     order: 7
     subQuestions: '8'
     responseOptions: ''
@@ -1042,7 +1115,8 @@ items:
   question110:
     description: Have you engaged in any acts of illegal fire setting?
     type: text
-    placeholder:
+    placeholder: 'Set a field on fire while playing with fireworks when I was 17'
+    required: false
     order: 8
     subQuestions: ''
     responseOptions: ''
@@ -1052,6 +1126,7 @@ items:
     description: Are you applying at the COLORADO PARKS AND WILDLIFE?
     type: checkbox
     placeholder:
+    required: true
     order: 9
     subQuestions: '10'
     responseOptions: ''
@@ -1063,7 +1138,7 @@ items:
       rules (e.g., hunting or fishing without a license)? Please describe when and
       where.
     type: textArea
-    placeholder:
+    placeholder: 'I fished without a license in 2014 in Wyoming'
     order: 10
     subQuestions: ''
     responseOptions: ''
@@ -1081,9 +1156,10 @@ items:
   question114:
     description:
       Have you ever had any law enforcement powers? (Worked for a police
-      department/corrections, etc.) 
+      department/corrections, etc.)
     type: checkbox
     placeholder:
+    required: true
     order: 12
     subQuestions: '13'
     responseOptions: ''
@@ -1092,7 +1168,8 @@ items:
   question115:
     description: What law enforcement powers have you abused?
     type: textArea
-    placeholder:
+    placeholder: 'I received professional courtesy for speeding'
+    required: false
     order: 13
     charLimit: 250
     subQuestions: ''
@@ -1111,9 +1188,10 @@ items:
   question117:
     description:
       Have you ever participated in any illegal sexual activities (please note
-      that admissions in this section are not automatic disqualifiers)? 
+      that admissions in this section are not automatic disqualifiers)?
     type: textArea
-    placeholder:
+    placeholder: 'I last had intercourse in a park at night in 2014'
+    required: false
     charLimit: 300
     order: 15
     subQuestions: ''
@@ -1133,6 +1211,7 @@ items:
     description: Have you ever filed for bankruptcy?
     type: checkbox
     placeholder:
+    required: true
     order: 2
     subQuestions: '3'
     responseOptions: ''
@@ -1141,7 +1220,8 @@ items:
   question120:
     description: 'Please provide date, amount, reason'
     type: textArea
-    placeholder:
+    placeholder: 'Chapter 7, 2017, $50,000, due to divorce'
+    required: false
     charLimit: 140
     order: 3
     subQuestions: ''
@@ -1151,6 +1231,7 @@ items:
   question121:
     description: Are any of your bills more than 30 days past due?
     type: checkbox
+    required: true
     placeholder:
     order: 4
     subQuestions: '5'
@@ -1160,7 +1241,8 @@ items:
   question122:
     description: 'Please provide number of bills behind, how long, explanation'
     type: textArea
-    placeholder:
+    placeholder: "Internet, 3 months, spouse lost their job and we couldn't pay it"
+    required: false
     charLimit: 140
     order: 5
     subQuestions: ''
@@ -1173,6 +1255,7 @@ items:
       actions against you for any money you owe anyone?
     type: checkbox
     placeholder:
+    required: true
     order: 6
     subQuestions: '7'
     responseOptions: ''
@@ -1181,7 +1264,8 @@ items:
   question124:
     description: Please explain
     type: textArea
-    placeholder:
+    placeholder: 'Wages garnished for 2017 taxes'
+    required: false
     charLimit: 140
     order: 7
     subQuestions: ''
@@ -1192,6 +1276,7 @@ items:
     description: Do you have any bills that are currently in collections?
     type: checkbox
     placeholder:
+    required: true
     order: 8
     subQuestions: '9'
     responseOptions: ''
@@ -1200,7 +1285,8 @@ items:
   question126:
     description: 'Please provide number of bills, total amount, explanation'
     type: textArea
-    placeholder:
+    placeholder: 'Three medical bills, $4,000, disputing with insurance'
+    required: false
     charLimit: 140
     order: 9
     subQuestions: ''
@@ -1211,6 +1297,7 @@ items:
     description: Are you currently behind on any child support payments?
     type: checkbox
     placeholder:
+    required: true
     order: 10
     subQuestions: '11'
     responseOptions: ''
@@ -1219,7 +1306,8 @@ items:
   question128:
     description: Please explain
     type: textArea
-    placeholder:
+    placeholder: 'I fell behind when I got laid off from my last job.'
+    required: false
     charLimit: 140
     order: 11
     subQuestions: ''
